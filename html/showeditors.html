@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="biblio,authors,editors,books,library">
+  <meta name="description" content="biblio,editors,editors,books,library">
   <meta name="author" content="Dylan Schirino">
   <title>BiblioTECH - </title>
 </head>
@@ -10,12 +10,12 @@
   <header class="header">
 
     <div class="header__topbar">
-      <h1 aria-level="1" role="heading" class="topbar__title"><a href="index.html">Bibliotech</a></h1>
+      <h1 aria-level="1" role="heading" class="topbar__title"><a href="../index.html">Bibliotech</a></h1>
       <nav class="topbar__menu">
         <h2 role="heading" aria-level="2"> Main Navigation</h2>
         <ul>
           <li class="menu__element">
-            <a href="index.html" class="menu__link">Accueil</a>
+            <a href="../index.html" class="menu__link">Accueil</a>
           </li>
           <li class="menu__element">
             <a href="livres.html" class="menu__link--active">Livres</a>
@@ -48,7 +48,7 @@
     <section class="underheader">
 
       <div class="mainimage">
-        <h2 role="heading" aria-level="2" class="mainimage__title">Liste des livres</h2>
+        <h2 role="heading" aria-level="2" class="mainimage__title">Fiche du livre</h2>
 
         <div class="search">
           <form action="#" method="get">
@@ -103,35 +103,46 @@
           </li>
       </section>
 
-      <section class="result">
-        <h3 role="heading" aria-level="3" class="result__title">Résultat de la recherche : </h3>
-
-        <article class="result__livre">
-          <h4 class="livre__title" role="heading" aria-level="4">Titre du livre</h4>
-          <img src="#" alt="Image du livre" class="livre__image">
-          <p class="livre__summary">
-            Résumé&nbsp;:&nbsp;
-          </p>
-        <a class="livre__button"  href="showbooks.html">lire la suite</a>
-        </article>
-
-        <article class="result__livre">
-          <h4 class="livre__title" role="heading" aria-level="4">Titre du livre</h4>
-          <img src="#" alt="Image du livre" class="livre__image">
-          <p class="livre__summary">
-            Résumé&nbsp;:&nbsp;
-          </p>
-      <a class="livre__button"  href="showbooks.html">lire la suite</a>
-        </article>
-        <article class="result__livre">
-          <h4 class="livre__title" role="heading" aria-level="4">Titre du livre</h4>
-          <img src="#" alt="Image du livre" class="livre__image">
-          <p class="livre__summary">
-            Résumé&nbsp;:&nbsp;
-          </p>
-          <a class="livre__button"  href="showbooks.html">lire la suite</a>
-        </article>
-
+      <section class="fiche__showeditors">
+          <h3 class="showeditors__title" role="heading" aria-level="3">Titre de l'éditeur</h3>
+          <img src="#" alt="Image de l'éditeur" class="showeditors__image">
+          <ul>
+            <li class="showeditors__element">
+              Nom&nbsp;:&nbsp; <span class="element__span">Nom</span>
+            </li>
+            <li class="showeditors__element">
+              Auteur&nbsp;:&nbsp; <span class="element__span">Prénom</span>
+            </li>
+            <li class="showeditors__element">
+              Livres&nbsp;:&nbsp;
+              <ul>
+                <li>
+                <span class="element__span"></span>livres
+              </li>
+            </ul>
+            <ul>
+              <li>
+              <span class="element__span"></span>livres
+            </li>
+          </ul>
+            </li>
+            <li class="showeditors__element">
+              Notes&nbsp;:&nbsp; <span class="element__span">rank</span>
+            </li>
+            <li class="showeditors__element">
+              <a href="#">Ajouter au favoris</a>
+            </li>
+            <li class="showeditors__element">
+              <a href="#">Modifier</a>
+            </li>
+            <li class="showeditors__element">
+              <a href="#">Supprimer</a>
+            </li>
+          </ul>
+          <article class="showeditors__summary">
+            <h5 class="summary__title">Description de la société</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </article>
       </section>
     </main>
     <footer>

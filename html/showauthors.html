@@ -10,18 +10,18 @@
   <header class="header">
 
     <div class="header__topbar">
-      <h1 aria-level="1" role="heading" class="topbar__title"><a href="index.html">Bibliotech</a></h1>
+      <h1 aria-level="1" role="heading" class="topbar__title"><a href="../index.html">Bibliotech</a></h1>
       <nav class="topbar__menu">
         <h2 role="heading" aria-level="2"> Main Navigation</h2>
         <ul>
           <li class="menu__element">
-            <a href="index.html" class="menu__link">Accueil</a>
+            <a href="../index.html" class="menu__link">Accueil</a>
           </li>
           <li class="menu__element">
-            <a href="livres.html" class="menu__link">Livres</a>
+            <a href="livres.html" class="menu__link--active">Livres</a>
           </li>
           <li class="menu__element">
-            <a href="auteurs.html" class="menu__link--active">Auteurs</a>
+            <a href="auteurs.html" class="menu__link">Auteurs</a>
           </li>
           <li class="menu__element">
             <a href="editeurs.html" class="menu__link">Editeurs</a>
@@ -48,11 +48,11 @@
     <section class="underheader">
 
       <div class="mainimage">
-        <h2 role="heading" aria-level="2" class="mainimage__title">Liste des auteurs</h2>
+        <h2 role="heading" aria-level="2" class="mainimage__title">Fiche du livre</h2>
 
         <div class="search">
           <form action="#" method="get">
-            <input type="search" placeholder="Rechercher un auteur" name="the_search">
+            <input type="search" placeholder="Rechercher un livre" name="the_search">
             <input type="submit" value="Envoyer">
           </form>
         </div>
@@ -103,35 +103,49 @@
           </li>
       </section>
 
-      <section class="result">
-        <h3 role="heading" aria-level="3" class="result__title">Résultat de la recherche : </h3>
-
-        <article class="result__auteur">
-          <h4 class="auteur__title" role="heading" aria-level="4">Titre du auteur</h4>
-          <img src="#" alt="Image du auteur" class="auteur__image">
-          <p class="auteur__summary">
-            Résumé&nbsp;:&nbsp;
-          </p>
-            <a class="auteur__button"  href="showauthors.html">lire la suite</a>
-        </article>
-
-        <article class="result__auteur">
-          <h4 class="auteur__title" role="heading" aria-level="4">Titre du auteur</h4>
-          <img src="#" alt="Image du auteur" class="auteur__image">
-          <p class="auteur__summary">
-            Résumé&nbsp;:&nbsp;
-          </p>
-          <a class="auteur__button"  href="showauthors.html">lire la suite</a>
-        </article>
-        <article class="result__auteur">
-          <h4 class="auteur__title" role="heading" aria-level="4">Titre du auteur</h4>
-          <img src="#" alt="Image du auteur" class="auteur__image">
-          <p class="auteur__summary">
-            Résumé&nbsp;:&nbsp;
-          </p>
-          <a class="auteur__button"  href="showauthors.html">lire la suite</a>
-        </article>
-
+      <section class="fiche__showauthors">
+          <h3 class="showauthors__title" role="heading" aria-level="3">Titre de l'auteur</h3>
+          <img src="#" alt="Image de l'auteur" class="showauthors__image">
+          <ul>
+            <li class="showauthors__element">
+              Nom&nbsp;:&nbsp; <span class="element__span">Nom</span>
+            </li>
+            <li class="showauthors__element">
+              Prénom&nbsp;:&nbsp; <span class="element__span">Prénom</span>
+            </li>
+            <li class="showauthors__element">
+              Editeurs&nbsp;:&nbsp; <span class="element__span">Nom</span>
+            </li>
+            <li class="showauthors__element">
+              Livres&nbsp;:&nbsp;
+              <ul>
+                <li>
+                <span class="element__span"></span>livres
+              </li>
+            </ul>
+            <ul>
+              <li>
+              <span class="element__span"></span>livres
+            </li>
+          </ul>
+            </li>
+            <li class="showauthors__element">
+              Notes&nbsp;:&nbsp; <span class="element__span">rank</span>
+            </li>
+            <li class="showauthors__element">
+              <a href="#">Ajouter au favoris</a>
+            </li>
+            <li class="showauthors__element">
+              <a href="#">Modifier</a>
+            </li>
+            <li class="showauthors__element">
+              <a href="#">Supprimer</a>
+            </li>
+          </ul>
+          <article class="showauthors__summary">
+            <h5 class="summary__title">Biographie</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </article>
       </section>
     </main>
     <footer>
