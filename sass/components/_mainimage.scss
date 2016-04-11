@@ -1,0 +1,25 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/mainimage.scss -  DESIGN mainimage section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+
+ .underheader{
+    background: url("../img/mainimage.svg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.8;
+    height:50em;
+ }
+ .mainimage{
+   &__title{
+     font-size: 4em;
+     color:$white;
+     padding-top:5.6em;
+   }
+   &__text{
+     color:$white;
+     text-shadow: 1px 1px black;
+   }
+ }

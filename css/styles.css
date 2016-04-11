@@ -1,4 +1,4 @@
-/* CVSERIES
+/* BIBLIOTHEQUE
  *
  * /sass/styles.scss - Main stylesheet
  *
@@ -63,7 +63,6 @@ html {
   font-size: 62.5%; }
 
 body {
-  background: url("../img/grille.png") repeat center fixed;
   background-size: 5em; }
 
 a {
@@ -76,6 +75,9 @@ p {
 h1 {
   font: 2.4em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif;
   text-transform: uppercase; }
+
+h2 {
+  font: 3em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif; }
 
 /*
 Dylan Schirino
@@ -96,13 +98,30 @@ HEADER OBJECTS FILES
   display: inline-block;
   margin-left: 1em; }
 
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/mainimage.scss - NON DESIGN mainimage section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.mainimage__title {
+  text-align: center; }
+
+.mainimage__text {
+  width: 30em;
+  margin: 2em auto; }
+
 /*
 Dylan Schirino
 2286
 HEADER COMPONENTS FILES
 */
 .header {
-  background-color: #1a2127; }
+  background-color: #1a2127;
+  position: fixed;
+  width: 100%;
+  z-index: 1; }
 
 .topbar__title {
   padding-top: 0.625em;
@@ -113,10 +132,59 @@ HEADER COMPONENTS FILES
 .menu__element {
   font: 1.6em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif; }
 
+.menu__submit {
+  border-radius: 5px;
+  height: 40px;
+  border: none;
+  background: #2b303b;
+  transition: .5s ease-in-out; }
+  .menu__submit:hover {
+    cursor: pointer; }
+
+.menu__search {
+  border-radius: 5px;
+  height: 40px;
+  border: none;
+  padding-left: 1em;
+  background: #2b303b;
+  color: black;
+  transition: .5s ease-in-out; }
+  .menu__search:focus {
+    background-color: white;
+    color: #2b303b; }
+  .menu__search:focus ~ .menu__submit {
+    background-color: white;
+    color: #2b303b; }
+
 .menu__link {
   color: white;
-  padding: 1.2em; }
+  padding: 1.2em;
+  transition: .3s ease-in-out; }
   .menu__link:hover {
     border-bottom: 3px solid white; }
+  .menu__link--active {
+    border-bottom: 3px solid white; }
+
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/mainimage.scss -  DESIGN mainimage section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.underheader {
+  background: url("../img/mainimage.svg") no-repeat center center;
+  background-size: cover;
+  opacity: 0.8;
+  height: 50em; }
+
+.mainimage__title {
+  font-size: 4em;
+  color: white;
+  padding-top: 5.6em; }
+
+.mainimage__text {
+  color: white;
+  text-shadow: 1px 1px black; }
 
 /*# sourceMappingURL=styles.css.map */

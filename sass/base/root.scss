@@ -3,7 +3,7 @@ html{
   font-size:62.5%;
 }
 body{
-  background: url("../img/grille.png") repeat center fixed;
+  //background: url("../img/grille.png") repeat center fixed;
   background-size:5em;
 }
 a{
@@ -16,4 +16,7 @@ p{
 h1{
     font:2.4em $lucidaStack;
     text-transform: uppercase;
+}
+h2{
+  font:3em $lucidaStack;
 }

@@ -1,4 +1,4 @@
-/* CVSERIES
+/* BIBLIOTHEQUE
  *
  * /sass/styles.scss - Main stylesheet
  *
@@ -21,7 +21,7 @@
 @import "base/root";
 // 5. Objects - Éléments de mise en forme non-cosmétique
  @import "object/header";
-// @import "object/mainimage";
+@import "object/mainimage";
 // @import "object/aside";
 // @import "object/maincontentinfo";
 // @import "object/maincontentinfotable";
@@ -33,5 +33,5 @@
 // @import "components/comment";
 // @import "components/maincontentinfo";
 // @import "components/maincontentinfotable";
-// @import "components/mainimage";
+@import "components/mainimage";
 // @import "components/footer";

@@ -1,0 +1,16 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/mainimage.scss - NON DESIGN mainimage section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.mainimage{
+  &__title{
+    text-align: center;
+  }
+  &__text{
+    width:30em;
+    margin: 2em auto;
+  }
+}
