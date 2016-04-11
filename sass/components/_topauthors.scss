@@ -1,0 +1,31 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/topauthors.scss -  DESIGN topauthors section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+
+ .topauthors{
+   background-color: $topauthorsBckg;
+   padding-bottom: 6em;
+   &__title{
+     text-align: center;
+     font-size: 3em;
+     padding:1em;
+     color:white;
+   }
+     &__image{
+       border-radius: 50%;
+       padding-bottom: 3em;
+     }
+     &__button{
+       font:1.3em $opensanStack;
+       background-color: #EEB555;
+       text-transform: uppercase;
+       padding:1em;
+       color:$white;
+       text-align: center;
+       border-radius: 5px;
+     }
+ }

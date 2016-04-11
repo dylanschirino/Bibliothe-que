@@ -1,0 +1,20 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/topauthors.scss -  NON DESIGN topauthors section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+
+.topauthors{
+  &__image{
+    display: block;
+    width:50em;
+    height:50em;
+    margin: auto;
+  }
+  &__button{
+    width:30em;
+    margin:auto;
+  }
+}

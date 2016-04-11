@@ -9,10 +9,10 @@
    background: url("../img/etagere.svg")no-repeat center center;
    opacity: 0.9;
    background-size: cover;
-   height:50em;
+   height:51em;
    &__title{
      text-transform: uppercase;
-     font-size: 4em;
+     font-size: 3em;
        padding-top:0.5em;
    }
  }
@@ -20,7 +20,7 @@
    display: inline-block;
    border-radius: 3px;
    background-color: $white;
-   padding-top:1em;
+   padding-top:2em;
    position: relative;
    &__title{
      text-align: center;
@@ -44,5 +44,9 @@
      border-radius: 5px;
      color:white;
      text-transform: uppercase;
+     transition: .3s ease-in-out;
+     &:hover{
+       background-color: $moreBckgHover;
+     }
    }
  }

@@ -14,17 +14,19 @@
 .books{
   margin-left: 23em;
   width:27em;
+  margin-top: 1em;
   &__summary{
     width:14em;
     font-size: 1.2em;
     margin:auto;
-    visibility: hidden;
+    display: none;
   }
   &__image{
     margin-left: 3.5em;
     margin-top: 1em;
+    transition: .3s ease;
     &:hover~.books__summary{
-      visibility: visible;
+      display: block;
     }
   }
   &__button{

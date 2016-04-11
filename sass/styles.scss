@@ -20,17 +20,15 @@
 // 4. Base - Éléments bruts
 @import "base/root";
 // 5. Objects - Éléments de mise en forme non-cosmétique
- @import "object/header";
+@import "object/header";
 @import "object/mainimage";
 @import "object/livrealaune";
-// @import "object/aside";
-
-// @import "object/comment";
-// @import "object/footer";
+@import "object/topauthors";
+@import "object/footer";
 //6. Components - Design des composants, morceaux d'UI
 @import "components/header";
 // @import "components/aside";
-// @import "components/comment";
+@import "components/topauthors";
 @import "components/mainimage";
 @import "components/livrealaune";
-// @import "components/footer";
+@import "components/footer";

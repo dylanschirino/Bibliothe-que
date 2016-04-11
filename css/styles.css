@@ -63,7 +63,6 @@ html {
   font-size: 62.5%; }
 
 body {
-  background: url("../img/grille.png") repeat center fixed;
   background-size: 5em; }
 
 a {
@@ -128,22 +127,41 @@ HEADER OBJECTS FILES
 
 .books {
   margin-left: 23em;
-  width: 27em; }
+  width: 27em;
+  margin-top: 1em; }
   .books__summary {
     width: 14em;
     font-size: 1.2em;
     margin: auto;
-    visibility: hidden; }
+    display: none; }
   .books__image {
     margin-left: 3.5em;
-    margin-top: 1em; }
+    margin-top: 1em;
+    transition: .3s ease; }
     .books__image:hover ~ .books__summary {
-      visibility: visible; }
+      display: block; }
   .books__button {
     width: 15em;
     margin: auto;
     position: relative;
     top: 15px; }
+
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/topauthors.scss -  NON DESIGN topauthors section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.topauthors__image {
+  display: block;
+  width: 50em;
+  height: 50em;
+  margin: auto; }
+
+.topauthors__button {
+  width: 30em;
+  margin: auto; }
 
 /*
 Dylan Schirino
@@ -200,6 +218,33 @@ HEADER COMPONENTS FILES
 
 /* BIBLIOTHEQUE
  *
+ * /sass/components/topauthors.scss -  DESIGN topauthors section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.topauthors {
+  background-color: #526470;
+  padding-bottom: 6em; }
+  .topauthors__title {
+    text-align: center;
+    font-size: 3em;
+    padding: 1em;
+    color: white; }
+  .topauthors__image {
+    border-radius: 50%;
+    padding-bottom: 3em; }
+  .topauthors__button {
+    font: 1.3em "opensans", "Helvetica", Arial;
+    background-color: #EEB555;
+    text-transform: uppercase;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    border-radius: 5px; }
+
+/* BIBLIOTHEQUE
+ *
  * /sass/components/mainimage.scss -  DESIGN mainimage section
  *
  * coded by Dylan Schirino
@@ -233,17 +278,17 @@ HEADER COMPONENTS FILES
   background: url("../img/etagere.svg") no-repeat center center;
   opacity: 0.9;
   background-size: cover;
-  height: 50em; }
+  height: 51em; }
   .topbooks__title {
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 3em;
     padding-top: 0.5em; }
 
 .books {
   display: inline-block;
   border-radius: 3px;
   background-color: white;
-  padding-top: 1em;
+  padding-top: 2em;
   position: relative; }
   .books__title {
     text-align: center;
@@ -264,6 +309,9 @@ HEADER COMPONENTS FILES
     font: 1.3em "opensans", "Helvetica", Arial;
     border-radius: 5px;
     color: white;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    transition: .3s ease-in-out; }
+    .books__button:hover {
+      background-color: #34A198; }
 
 /*# sourceMappingURL=styles.css.map */
