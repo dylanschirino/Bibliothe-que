@@ -3,14 +3,14 @@ html{
   font-size:62.5%;
 }
 body{
-  //background: url("../img/grille.png") repeat center fixed;
+  background: url("../img/grille.png") repeat center fixed;
   background-size:5em;
 }
 a{
   text-decoration: none;
   display: block;
 }
-p{
+p,h4{
   font:1.6em $opensanStack;
 }
 h1{
@@ -19,4 +19,7 @@ h1{
 }
 h2{
   font:3em $lucidaStack;
+}
+h3{
+  font:2em $lucidaStack;
 }

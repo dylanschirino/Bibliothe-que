@@ -63,13 +63,14 @@ html {
   font-size: 62.5%; }
 
 body {
+  background: url("../img/grille.png") repeat center fixed;
   background-size: 5em; }
 
 a {
   text-decoration: none;
   display: block; }
 
-p {
+p, h4 {
   font: 1.6em "opensans", "Helvetica", Arial; }
 
 h1 {
@@ -78,6 +79,9 @@ h1 {
 
 h2 {
   font: 3em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif; }
+
+h3 {
+  font: 2em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif; }
 
 /*
 Dylan Schirino
@@ -109,8 +113,37 @@ HEADER OBJECTS FILES
   text-align: center; }
 
 .mainimage__text {
-  width: 30em;
+  width: 29.6em;
   margin: 2em auto; }
+
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/livrealaune.scss -  NON DESIGN livrealaune section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.topbooks__title {
+  margin-left: 2.1em; }
+
+.books {
+  margin-left: 23em;
+  width: 27em; }
+  .books__summary {
+    width: 14em;
+    font-size: 1.2em;
+    margin: auto;
+    visibility: hidden; }
+  .books__image {
+    margin-left: 3.5em;
+    margin-top: 1em; }
+    .books__image:hover ~ .books__summary {
+      visibility: visible; }
+  .books__button {
+    width: 15em;
+    margin: auto;
+    position: relative;
+    top: 15px; }
 
 /*
 Dylan Schirino
@@ -185,6 +218,52 @@ HEADER COMPONENTS FILES
 
 .mainimage__text {
   color: white;
-  text-shadow: 1px 1px black; }
+  background-color: black;
+  padding: 1em;
+  opacity: 0.9; }
+
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/livrealaune.scss -  DESIGN livrealaune section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.topbooks {
+  background: url("../img/etagere.svg") no-repeat center center;
+  opacity: 0.9;
+  background-size: cover;
+  height: 50em; }
+  .topbooks__title {
+    text-transform: uppercase;
+    font-size: 4em;
+    padding-top: 0.5em; }
+
+.books {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: white;
+  padding-top: 1em;
+  position: relative; }
+  .books__title {
+    text-align: center;
+    padding: 0.5em;
+    text-transform: uppercase; }
+  .books__summary {
+    font-size: 1.2em;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    position: absolute;
+    bottom: 47px;
+    left: 39px; }
+  .books__button {
+    background-color: #67C1B9;
+    padding: 1em;
+    text-align: center;
+    font: 1.3em "opensans", "Helvetica", Arial;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=styles.css.map */

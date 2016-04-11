@@ -1,0 +1,36 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/livrealaune.scss -  NON DESIGN livrealaune section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.topbooks{
+  &__title{
+    margin-left:2.1em;
+  }
+}
+
+.books{
+  margin-left: 23em;
+  width:27em;
+  &__summary{
+    width:14em;
+    font-size: 1.2em;
+    margin:auto;
+    visibility: hidden;
+  }
+  &__image{
+    margin-left: 3.5em;
+    margin-top: 1em;
+    &:hover~.books__summary{
+      visibility: visible;
+    }
+  }
+  &__button{
+    width:15em;
+    margin: auto;
+    position: relative;
+    top:15px;
+  }
+}

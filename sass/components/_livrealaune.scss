@@ -1,0 +1,48 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/livrealaune.scss -  DESIGN livrealaune section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+ .topbooks{
+   background: url("../img/etagere.svg")no-repeat center center;
+   opacity: 0.9;
+   background-size: cover;
+   height:50em;
+   &__title{
+     text-transform: uppercase;
+     font-size: 4em;
+       padding-top:0.5em;
+   }
+ }
+ .books{
+   display: inline-block;
+   border-radius: 3px;
+   background-color: $white;
+   padding-top:1em;
+   position: relative;
+   &__title{
+     text-align: center;
+     padding:0.5em;
+     text-transform: uppercase;
+   }
+  &__summary{
+    font-size: 1.2em;
+    background-color: $black;
+    color:$white;
+    padding:1em;
+    position: absolute;
+    bottom:47px;
+    left:39px;
+  }
+   &__button{
+     background-color: $moreBckg;
+     padding:1em;
+     text-align: center;
+     font: 1.3em $opensanStack;
+     border-radius: 5px;
+     color:white;
+     text-transform: uppercase;
+   }
+ }
