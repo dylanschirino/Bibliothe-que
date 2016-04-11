@@ -1,0 +1,28 @@
+/*
+Dylan Schirino
+2286
+HEADER OBJECTS FILES
+*/
+
+.header{
+  &__topbar{
+    height: 6em;
+  }
+}
+.topbar{
+  &__title{
+    &--link{
+      margin-left: 3.8em;
+    }
+  }
+  &__menu{
+    float:right;
+    margin-right: 5em;
+  }
+}
+.menu{
+  &__element{
+    display: inline-block;
+    margin-left: 1em;
+  }
+}

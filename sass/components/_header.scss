@@ -1,1 +1,34 @@
+/*
+Dylan Schirino
+2286
+HEADER COMPONENTS FILES
+*/
 
+
+
+.header{
+  background-color:$topbarBckg;
+}
+.topbar{
+  &__title{
+    padding-top:0.625em;
+    display: inline-block;
+    &--link{
+      color:white;
+    }
+  }
+}
+
+.menu{
+  &__element{
+    font: 1.6em $lucidaStack;
+
+  }
+  &__link{
+    color:white;
+    padding:1.2em;
+    &:hover{
+      border-bottom: 3px solid white;
+    }
+  }
+}

@@ -12,6 +12,9 @@
   font-weight: normal;
   font-style: normal; }
 
+.topbar__menu h2 {
+  display: none; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,10 +62,61 @@ table {
 html {
   font-size: 62.5%; }
 
+body {
+  background: url("../img/grille.png") repeat center fixed;
+  background-size: 5em; }
+
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  display: block; }
 
 p {
-  font: 1.8em "opensans", "Helvetica", Arial; }
+  font: 1.6em "opensans", "Helvetica", Arial; }
+
+h1 {
+  font: 2.4em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif;
+  text-transform: uppercase; }
+
+/*
+Dylan Schirino
+2286
+HEADER OBJECTS FILES
+*/
+.header__topbar {
+  height: 6em; }
+
+.topbar__title--link {
+  margin-left: 3.8em; }
+
+.topbar__menu {
+  float: right;
+  margin-right: 5em; }
+
+.menu__element {
+  display: inline-block;
+  margin-left: 1em; }
+
+/*
+Dylan Schirino
+2286
+HEADER COMPONENTS FILES
+*/
+.header {
+  background-color: #1a2127; }
+
+.topbar__title {
+  padding-top: 0.625em;
+  display: inline-block; }
+  .topbar__title--link {
+    color: white; }
+
+.menu__element {
+  font: 1.6em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif; }
+
+.menu__link {
+  color: white;
+  padding: 1.2em; }
+  .menu__link:hover {
+    border-bottom: 3px solid white; }
 
 /*# sourceMappingURL=styles.css.map */

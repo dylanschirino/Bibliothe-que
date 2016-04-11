@@ -2,9 +2,18 @@
 html{
   font-size:62.5%;
 }
+body{
+  background: url("../img/grille.png") repeat center fixed;
+  background-size:5em;
+}
 a{
   text-decoration: none;
+  display: block;
 }
 p{
-  font:1.8em $opensanStack;
+  font:1.6em $opensanStack;
+}
+h1{
+    font:2.4em $lucidaStack;
+    text-transform: uppercase;
 }
