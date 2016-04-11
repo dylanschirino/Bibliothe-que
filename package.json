@@ -1,8 +1,4 @@
 {
-  "name": "Dylan Schirino",
-  "version": "0.0.1",
-  "private": true,
-  "description": "Bibliotheque",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "grunt": "^0.4.5",
