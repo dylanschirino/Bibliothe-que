@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="biblio,authors,editors,books,library">
+  <meta name="author" content="Dylan Schirino">
+  <title>BiblioTECH - </title>
+</head>
+<body>
+  <header class="header">
+
+    <div class="header__topbar">
+      <h1 aria-level="1" role="heading" class="topbar__title"><a href="index.html">Bibliotech</a></h1>
+      <nav class="topbar__menu">
+        <h2 role="heading" aria-level="2"> Main Navigation</h2>
+        <ul>
+          <li class="menu__element">
+            <a href="index.html" class="menu__link">Accueil</a>
+          </li>
+          <li class="menu__element">
+            <a href="livres.html" class="menu__link">Livres</a>
+          </li>
+          <li class="menu__element">
+            <a href="auteurs.html" class="menu__link">Auteurs</a>
+          </li>
+          <li class="menu__element">
+            <a href="editeurs.html" class="menu__link">Editeurs</a>
+          </li>
+          <li class="menu__element">
+            <a href="contact.html" class="menu__link--active">À propos</a>
+          </li>
+          <li class="menu__element">
+            <div class="search">
+              <form action="#" method="get">
+                <input type="search" placeholder="Rechercher un livre" name="the_search">
+                <input type="submit" value="Envoyer">
+              </form>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <main class="wrapper">
+
+    <section class="underheader">
+
+      <div class="googlemaps">
+        <h2 role="heading" aria-level="2" class="googlemaps__title">Contact</h2>
+
+      </div>
+
+    </section>
+
+    <section class="content__info">
+      <h3 role="heading" aria-level="3" class="info__title">Information </h3>
+        <ul>
+          <li class="info__element">
+            Adresse&nbsp;:&nbsp;
+            Bibliothèque municipale de Lyon 30 boulevard Vivier-Merle 69431 Lyon Cedex 03
+          </li>
+          <li class="info__element">
+            Téléphone&nbsp;:&nbsp;
+            <a href="tel:+32.442.57.23">+32.442.57.23</a>
+          </li>
+          <li class="info__element">
+            Horaire&nbsp;:&nbsp;
+            Ouvert de 9h - 18h Fermé le week-end et jours férié
+          </li>
+        </ul>
+    </section>
+  </main>
+  <footer>
+    <section class="footer">
+      <h3 role="heading" aria-level="3" class="footer__title">Contact</h3>
+
+      <form method="get" action="#" class="footer__form">
+        <label for="name">Nom&nbsp;</label>
+        <input type="text" name="nom" id="name" value="" placeholder="Dylan">
+        <label for="firstname">Prénom&nbsp;</label>
+        <input type="text" name="prénom" id="firstname" value="" placeholder="Schirino">
+        <label for="message">Message&nbsp;</label>
+        <textarea id="message"  name="message">
+        </textarea>
+        <input type="submit" value="Envoyer">
+      </form>
+
+      <div class="subfooter">
+        <p class="subfooter__text">Design by Dylan Schirino &copy;</p>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>

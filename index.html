@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="biblio,authors,editors,books,library">
+    <meta name="author" content="Dylan Schirino">
+    <title>BiblioTECH</title>
+  </head>
+  <body>
+    <header class="header">
+
+      <div class="header__topbar">
+        <h1 aria-level="1" role="heading" class="topbar__title"><a href="index.html">Bibliotech</a></h1>
+        <nav class="topbar__menu">
+          <h2 role="heading" aria-level="2"> Main Navigation</h2>
+          <ul>
+            <li class="menu__element">
+              <a href="index.html" class="menu__link--active">Accueil</a>
+            </li>
+            <li class="menu__element">
+              <a href="livres.html" class="menu__link">Livres</a>
+            </li>
+            <li class="menu__element">
+              <a href="auteurs.html" class="menu__link">Auteurs</a>
+            </li>
+            <li class="menu__element">
+              <a href="editeurs.html" class="menu__link">Editeurs</a>
+            </li>
+            <li class="menu__element">
+              <a href="contact.html" class="menu__link">À propos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+    <main class="wrapper">
+
+    <section class="underheader">
+
+      <div class="mainimage">
+        <h2 role="heading" aria-level="2" class="mainimage__title">La première bibliothèque interactive</h2>
+
+        <p class="mainimage__text">Ici vous pouvez consulté des livres, des auteurs ainsi que des éditeurs selon vos besoin.</p>
+        <p class="mainimage__text">Vous pouvez également les modifiés à votre guise, les ajoutés à vos favoris et supprimé un livre sous réserve d'acceptation</p>
+
+      </div>
+
+    </section>
+
+    <section class="topbooks">
+      <h3 role="heading" aria-level="3" class="topbooks__title">Livres à la une</h3>
+
+      <article class="books">
+        <h4 class="books__title" role="heading" aria-level="4">Titre du livre</h4>
+        <img src="#" alt="Image du livre" class="topbooks__image">
+        <p class="books__summary">
+          Résumé&nbsp;:&nbsp;
+        </p>
+          <a class="books__button"  href="showbooks.html">lire la suite</a>
+      </article>
+
+      <article class="books">
+        <h4 class="books__title" role="heading" aria-level="4">Titre du livre</h4>
+        <img src="#" alt="Image du livre" class="topbooks__image">
+        <p class="books__summary">
+          Résumé&nbsp;:&nbsp;
+        </p>
+      <a class="books__button"  href="showbooks.html">lire la suite</a>
+      </article>
+
+    </section>
+
+    <section class="topauthors">
+      <h3 role="heading" aria-level="3" class="topauthors__title">Auteurs du mois</h3>
+      <img src="#" alt="Image de l'auteur" class="topauthors__image">
+    <a class="topauthors__button"  href="showauthors.html">lire la suite</a>
+    </section>
+
+  </main>
+  <footer>
+    <section class="footer">
+        <h3 role="heading" aria-level="3" class="footer__title">Contact</h3>
+
+        <form method="get" action="#" class="footer__form">
+          <label for="name">Nom&nbsp;</label>
+          <input type="text" name="nom" id="name" value="" placeholder="Dylan">
+          <label for="firstname">Prénom&nbsp;</label>
+          <input type="text" name="prénom" id="firstname" value="" placeholder="Schirino">
+          <label for="message">Message&nbsp;</label>
+          <textarea id="message"  name="message">
+          </textarea>
+          <input type="submit" value="Envoyer">
+        </form>
+
+        <div class="subfooter">
+          <p class="subfooter__text">Design by Dylan Schirino &copy;</p>
+        </div>
+    </section>
+  </footer>
+  </body>
+</html>

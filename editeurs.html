@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="biblio,authors,editors,books,library">
+  <meta name="author" content="Dylan Schirino">
+  <title>BiblioTECH - </title>
+</head>
+<body>
+  <header class="header">
+
+    <div class="header__topbar">
+      <h1 aria-level="1" role="heading" class="topbar__title"><a href="index.html">Bibliotech</a></h1>
+      <nav class="topbar__menu">
+        <h2 role="heading" aria-level="2"> Main Navigation</h2>
+        <ul>
+          <li class="menu__element">
+            <a href="index.html" class="menu__link">Accueil</a>
+          </li>
+          <li class="menu__element">
+            <a href="editeurs.html" class="menu__link">Livres</a>
+          </li>
+          <li class="menu__element">
+            <a href="auteurs.html" class="menu__link">Auteurs</a>
+          </li>
+          <li class="menu__element">
+            <a href="editeurs.html" class="menu__link--active">Editeurs</a>
+          </li>
+          <li class="menu__element">
+            <a href="contact.html" class="menu__link">À propos</a>
+          </li>
+          <li class="menu__element">
+            <div class="search">
+              <form action="#" method="get">
+                <input type="search" placeholder="Rechercher un livre" name="the_search">
+                <input type="submit" value="Envoyer">
+              </form>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <main class="wrapper">
+
+    <section class="underheader">
+
+      <div class="mainimage">
+        <h2 role="heading" aria-level="2" class="mainimage__title">Liste des editeurs</h2>
+
+        <div class="search">
+          <form action="#" method="get">
+            <input type="search" placeholder="Rechercher un editeur" name="the_search">
+            <input type="submit" value="Envoyer">
+          </form>
+        </div>
+
+      </div>
+
+    </section>
+    <section class="filter">
+      <h3 role="heading" aria-level="3">Filtrer par&nbsp;:</h3>
+        <ul>
+          <li>Date
+            <ul>
+              <li>
+                <a href="#" class="filter__link">Plus récent</a>
+              </li>
+              <li>
+                <a href="#" class="filter__link">Plus ancien</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>Genre
+            <ul>
+              <li>
+                <a href="#" class="filter__link">Action</a>
+              </li>
+              <li>
+                <a href="#" class="filter__link">Drame</a>
+              </li>
+              <li>
+                <a href="#" class="filter__link">Aventure</a>
+              </li>
+              <li>
+                <a href="#" class="filter__link">Policier</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>Top
+            <ul>
+              <li>
+                <a href="#" class="filter__link">Les plus cotés</a>
+              </li>
+              <li>
+                <a href="#" class="filter__link">Les plus detesté</a>
+              </li>
+            </ul>
+          </li>
+      </section>
+
+      <section class="result">
+        <h3 role="heading" aria-level="3" class="result__title">Résultat de la recherche : </h3>
+
+        <article class="result__editeur">
+          <h4 class="editeur__title" role="heading" aria-level="4">Titre du editeur</h4>
+          <img src="#" alt="Image du editeur" class="editeur__image">
+          <p class="editeur__summary">
+            Résumé&nbsp;:&nbsp;
+          </p>
+          <a class="editeur__button"  href="showeditors.html">lire la suite</a>
+        </article>
+
+        <article class="result__editeur">
+          <h4 class="editeur__title" role="heading" aria-level="4">Titre du editeur</h4>
+          <img src="#" alt="Image du editeur" class="editeur__image">
+          <p class="editeur__summary">
+            Résumé&nbsp;:&nbsp;
+          </p>
+          <a class="editeur__button"  href="showeditors.html">lire la suite</a>
+        </article>
+        <article class="result__editeur">
+          <h4 class="editeur__title" role="heading" aria-level="4">Titre du editeur</h4>
+          <img src="#" alt="Image du editeur" class="editeur__image">
+          <p class="editeur__summary">
+            Résumé&nbsp;:&nbsp;
+          </p>
+          <a class="editeur__button"  href="showeditors.html">lire la suite</a>
+        </article>
+
+      </section>
+    </main>
+    <footer>
+      <section class="footer">
+        <h3 role="heading" aria-level="3" class="footer__title">Contact</h3>
+
+        <form method="get" action="#" class="footer__form">
+          <label for="name">Nom&nbsp;</label>
+          <input type="text" name="nom" id="name" value="" placeholder="Dylan">
+          <label for="firstname">Prénom&nbsp;</label>
+          <input type="text" name="prénom" id="firstname" value="" placeholder="Schirino">
+          <label for="message">Message&nbsp;</label>
+          <textarea id="message"  name="message">
+          </textarea>
+          <input type="submit" value="Envoyer">
+        </form>
+
+        <div class="subfooter">
+          <p class="subfooter__text">Design by Dylan Schirino &copy;</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+  </html>
