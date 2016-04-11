@@ -163,6 +163,32 @@ HEADER OBJECTS FILES
   width: 30em;
   margin: auto; }
 
+/* BIBLIOTHEQUE
+*
+* /sass/object/footer.scss - NON DESIGN footer section
+*
+* coded by Dylan Schirino
+* started at 03/04/2016
+*/
+.footer__label {
+  display: block;
+  padding: 0.5em;
+  text-align: center; }
+
+.footer__submit {
+  width: 20em;
+  height: 4em;
+  display: block;
+  margin: 2em auto; }
+
+.footer__input {
+  width: 30em;
+  margin: auto;
+  display: block;
+  padding: 1em; }
+  .footer__input--textarea {
+    width: 25.8em; }
+
 /*
 Dylan Schirino
 2286
@@ -242,6 +268,8 @@ HEADER COMPONENTS FILES
     color: white;
     text-align: center;
     border-radius: 5px; }
+    .topauthors__button:hover {
+      background-color: #D19E4A; }
 
 /* BIBLIOTHEQUE
  *
@@ -313,5 +341,41 @@ HEADER COMPONENTS FILES
     transition: .3s ease-in-out; }
     .books__button:hover {
       background-color: #34A198; }
+
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/footer.scss -  DESIGN footer section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.footer {
+  background-color: #414141; }
+  .footer__title {
+    text-align: center;
+    font-size: 3.8em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1em; }
+  .footer__label {
+    color: white;
+    font: 1.6em "opensans", "Helvetica", Arial; }
+  .footer__submit {
+    border: none;
+    background-color: #E24A4A;
+    border-radius: 5px;
+    font: 1.6em "opensans", "Helvetica", Arial;
+    color: white; }
+    .footer__submit:hover {
+      background-color: #B62E2E;
+      cursor: pointer; }
+
+.subfooter {
+  background-color: #27313B;
+  padding: 2em; }
+  .subfooter__text {
+    text-align: center;
+    color: white; }
 
 /*# sourceMappingURL=styles.css.map */
