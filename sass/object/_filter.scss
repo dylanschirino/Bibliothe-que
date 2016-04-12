@@ -1,0 +1,27 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/filter.scss -   NON DESIGN filter section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+
+ .filter{
+   &__content{
+     width:40em;
+     margin: auto;
+   }
+
+   &__input{
+     width:100%;
+     margin-bottom: 2em;
+   }
+   &__submit{
+    display: none;
+   }
+ }
+ .menu{
+   &__title{
+     margin-left: 4em;
+   }
+ }

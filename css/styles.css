@@ -164,6 +164,34 @@ HEADER OBJECTS FILES
   margin: auto; }
 
 /* BIBLIOTHEQUE
+ *
+ * /sass/object/filter.scss -   NON DESIGN filter section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.filter__content {
+  width: 40em;
+  margin: auto; }
+
+.filter__input {
+  width: 100%;
+  margin-bottom: 2em; }
+
+.filter__submit {
+  display: none; }
+
+.menu__title {
+  margin-left: 4em; }
+
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/result.scss -  NON DESIGN result section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+/* BIBLIOTHEQUE
 *
 * /sass/object/footer.scss - NON DESIGN footer section
 *
@@ -242,6 +270,53 @@ HEADER COMPONENTS FILES
   .menu__link--active {
     border-bottom: 3px solid white; }
 
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/filter.scss -  DESIGN filter section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.filter {
+  background-color: #E24A4A; }
+  .filter__title {
+    padding: 1em 0;
+    text-transform: uppercase;
+    color: white; }
+  .filter__search {
+    border-bottom: 1px solid white; }
+  .filter__input {
+    padding: 1em;
+    border: none; }
+  .filter__link {
+    padding-top: 1em;
+    font: 1.2em "opensans", "Helvetica", Arial;
+    color: white; }
+    .filter__link:hover {
+      text-decoration: underline; }
+  .filter__content {
+    padding-bottom: 2em; }
+  .filter__menu {
+    border-bottom: 1px solid white; }
+
+.menu__title {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1em;
+  text-align: center; }
+
+.menu__text {
+  font: 1.6em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif;
+  color: white;
+  text-transform: uppercase; }
+
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/result.scss -  DESIGN result section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
 /* BIBLIOTHEQUE
  *
  * /sass/components/topauthors.scss -  DESIGN topauthors section

@@ -1,0 +1,50 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/filter.scss -  DESIGN filter section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+
+.filter{
+  background-color: #E24A4A;
+  &__title{
+    padding: 1em 0;
+    text-transform: uppercase;
+    color:$white;
+  }
+  &__search{
+    border-bottom: 1px solid white;
+  }
+  &__input{
+    padding:1em;
+    border: none;
+  }
+  &__link{
+    padding-top: 1em;
+    font:1.2em $opensanStack;
+    color:$white;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__content{
+      padding-bottom: 2em;
+  }
+  &__menu{
+    border-bottom: 1px solid white;
+  }
+}
+.menu{
+  &__title{
+    display: inline-block;
+    vertical-align: top;
+    padding:1em;
+    text-align: center;
+  }
+  &__text{
+    font:1.6em $lucidaStack;
+    color:$white;
+    text-transform: uppercase;
+  }
+}

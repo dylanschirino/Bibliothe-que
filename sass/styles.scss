@@ -24,10 +24,13 @@
 @import "object/mainimage";
 @import "object/livrealaune";
 @import "object/topauthors";
+@import "object/filter";
+@import "object/result";
 @import "object/footer";
 //6. Components - Design des composants, morceaux d'UI
 @import "components/header";
-// @import "components/aside";
+@import "components/filter";
+@import "components/result";
 @import "components/topauthors";
 @import "components/mainimage";
 @import "components/livrealaune";

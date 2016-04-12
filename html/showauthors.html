@@ -49,59 +49,64 @@
     <section class="underheader">
 
       <div class="mainimage">
-        <h2 role="heading" aria-level="2" class="mainimage__title">Fiche du livre</h2>
-
-        <div class="search">
-          <form action="#" method="get">
-            <input type="search" placeholder="Rechercher un livre" name="the_search">
-            <input type="submit" value="Envoyer">
-          </form>
-        </div>
+        <h2 role="heading" aria-level="2" class="mainimage__title">Liste des livres</h2>
 
       </div>
 
     </section>
     <section class="filter">
-      <h3 role="heading" aria-level="3">Filtrer par&nbsp;:</h3>
-        <ul>
-          <li>Date
+      <div class="filter__content">
+      <h3 role="heading" aria-level="3" class="filter__title">Filtrer par&nbsp;:</h3>
+      <div class="filter__search">
+        <form action="#" method="get">
+          <input type="search" class="filter__input" placeholder="Rechercher un livre" name="the_search">
+          <input type="submit" value="Envoyer" class="filter__submit">
+        </form>
+      </div>
+        <ul class="filter__menu">
+          <li class="menu__title">
+            <span class="menu__text">Date</span>
             <ul>
-              <li>
+              <li class="menu__subelement">
                 <a href="#" class="filter__link">Plus récent</a>
               </li>
-              <li>
+              <li class="menu__subelement">
                 <a href="#" class="filter__link">Plus ancien</a>
               </li>
             </ul>
           </li>
 
-          <li>Genre
+          <li class="menu__title">
+            <span class="menu__text">Genre</span>
             <ul>
-              <li>
+              <li class="menu__subelement">
                 <a href="#" class="filter__link">Action</a>
               </li>
-              <li>
+              <li class="menu__subelement">
                 <a href="#" class="filter__link">Drame</a>
               </li>
-              <li>
+              <li class="menu__subelement">
                 <a href="#" class="filter__link">Aventure</a>
               </li>
-              <li>
+              <li class="menu__subelement">
                 <a href="#" class="filter__link">Policier</a>
               </li>
             </ul>
           </li>
 
-          <li>Top
+          <li class="menu__title">
+            <span class="menu__text">Top</span>
             <ul>
-              <li>
+              <li class="menu__subelement">
                 <a href="#" class="filter__link">Les plus cotés</a>
               </li>
-              <li>
+              <li class="menu__subelement">
                 <a href="#" class="filter__link">Les plus detesté</a>
               </li>
             </ul>
           </li>
+        </ul>
+      </div>
       </section>
 
       <section class="fiche__showauthors">
