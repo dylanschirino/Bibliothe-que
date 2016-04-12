@@ -63,6 +63,7 @@ html {
   font-size: 62.5%; }
 
 body {
+  background: url("../img/grille.png") repeat center fixed;
   background-size: 5em; }
 
 a {
@@ -191,6 +192,35 @@ HEADER OBJECTS FILES
  * coded by Dylan Schirino
  * started at 03/04/2016
  */
+.result {
+  width: 80em;
+  margin: auto; }
+  .result__title {
+    margin-left: 4.2em; }
+  .result__livre {
+    margin-top: 3em;
+    margin-left: 8.6em; }
+    .result__livre::after {
+      content: "";
+      display: block;
+      clear: both; }
+
+.livre__image {
+  display: block;
+  width: 25em;
+  height: 39em;
+  float: left;
+  margin-bottom: 2em;
+  padding-right: 10em; }
+  .livre__image--right {
+    float: right;
+    padding-left: 10em; }
+
+.livre__button {
+  margin-top: 2em;
+  text-align: center;
+  width: 20em; }
+
 /* BIBLIOTHEQUE
 *
 * /sass/object/footer.scss - NON DESIGN footer section
@@ -317,6 +347,31 @@ HEADER COMPONENTS FILES
  * coded by Dylan Schirino
  * started at 03/04/2016
  */
+.result__title {
+  padding-top: 2em; }
+
+.result__livre {
+  border-bottom: 1px solid black;
+  padding: 2em 0; }
+
+.livre__title {
+  padding-bottom: 2em; }
+
+.livre__summary {
+  font-size: 1.4em; }
+
+.livre__button {
+  display: inline-block;
+  background-color: #2E4B6C;
+  font: 1.2em "opensans", "Helvetica", Arial;
+  color: white;
+  text-transform: uppercase;
+  padding: 1em;
+  border-radius: 5px;
+  transition: .3s ease-in-out; }
+  .livre__button:hover {
+    background-color: #142335; }
+
 /* BIBLIOTHEQUE
  *
  * /sass/components/topauthors.scss -  DESIGN topauthors section

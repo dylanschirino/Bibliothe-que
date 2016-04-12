@@ -5,3 +5,39 @@
  * coded by Dylan Schirino
  * started at 03/04/2016
  */
+
+ .result{
+   width:80em;
+   margin: auto;
+   &__title{
+     margin-left: 4.2em;
+   }
+   &__livre{
+     margin-top: 3em;
+     margin-left: 8.6em;
+     &::after{
+       content:"";
+       display: block;
+       clear: both;
+     }
+   }
+ }
+.livre{
+  &__image{
+    display: block;
+    width:25em;
+    height:39em;
+    float:left;
+    margin-bottom: 2em;
+    padding-right: 10em;
+    &--right{
+      float:right;
+      padding-left: 10em;
+    }
+  }
+  &__button{
+    margin-top: 2em;
+    text-align: center;
+    width: 20em;
+  }
+}

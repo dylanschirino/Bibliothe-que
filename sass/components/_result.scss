@@ -5,3 +5,35 @@
  * coded by Dylan Schirino
  * started at 03/04/2016
  */
+
+ .result{
+   &__title{
+     padding-top:2em;
+   }
+   &__livre{
+     border-bottom: 1px solid black;
+     padding: 2em 0;
+   }
+ }
+
+.livre{
+  &__title{
+    padding-bottom: 2em;
+  }
+  &__summary{
+    font-size: 1.4em;
+  }
+  &__button{
+    display: inline-block;
+    background-color: #2E4B6C;
+    font: 1.2em $opensanStack;
+    color: $white;
+    text-transform: uppercase;
+    padding: 1em;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    &:hover{
+      background-color: #142335;
+    }
+  }
+}
