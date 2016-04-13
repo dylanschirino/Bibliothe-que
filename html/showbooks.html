@@ -19,7 +19,7 @@
             <a href="../index.html" class="menu__link">Accueil</a>
           </li>
           <li class="menu__element">
-            <a href="livres.html" class="menu__link--active">Livres</a>
+            <a href="livres.html" class="menu__link menu__link--active">Livres</a>
           </li>
           <li class="menu__element">
             <a href="auteurs.html" class="menu__link">Auteurs</a>
@@ -49,20 +49,20 @@
     <section class="underheader">
 
       <div class="mainimage">
-        <h2 role="heading" aria-level="2" class="mainimage__title">Liste des livres</h2>
+        <h2 role="heading" aria-level="2" class="mainimage__title">Fiche du livre</h2>
 
       </div>
 
     </section>
     <section class="filter">
       <div class="filter__content">
-      <h3 role="heading" aria-level="3" class="filter__title">Filtrer par&nbsp;:</h3>
-      <div class="filter__search">
-        <form action="#" method="get">
-          <input type="search" class="filter__input" placeholder="Rechercher un livre" name="the_search">
-          <input type="submit" value="Envoyer" class="filter__submit">
-        </form>
-      </div>
+        <h3 role="heading" aria-level="3" class="filter__title">Filtrer par&nbsp;:</h3>
+        <div class="filter__search">
+          <form action="#" method="get">
+            <input type="search" class="filter__input" placeholder="Rechercher un livre" name="the_search">
+            <input type="submit" value="Envoyer" class="filter__submit">
+          </form>
+        </div>
         <ul class="filter__menu">
           <li class="menu__title">
             <span class="menu__text">Date</span>
@@ -107,59 +107,75 @@
           </li>
         </ul>
       </div>
-      </section>
+    </section>
 
-      <section class="fiche__showbook">
-          <h3 class="showbook__title" role="heading" aria-level="3">Titre du livre</h3>
-          <img src="#" alt="Image du livre" class="showbook__image">
-          <ul>
-            <li class="showbook__element">
-              Auteurs&nbsp;:&nbsp; <span class="element__span">Nom</span>
-            </li>
-            <li class="showbook__element">
-              Editeurs&nbsp;:&nbsp; <span class="element__span">Nom</span>
-            </li>
-            <li class="showbook__element">
-              Pages&nbsp;:&nbsp; <span class="element__span">344</span>
-            </li>
-            <li class="showbook__element">
-              Notes&nbsp;:&nbsp; <span class="element__span">rank</span>
-            </li>
-            <li class="showbook__element">
-              <a href="#">Ajouter au favoris</a>
-            </li>
-            <li class="showbook__element">
-              <a href="#">Modifier</a>
-            </li>
-            <li class="showbook__element">
-              <a href="#">Supprimer</a>
-            </li>
-          </ul>
-          <article class="showbooks__summary">
-            <h5 class="summary__title">Résumé</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </article>
-      </section>
-    </main>
-    <footer>
-      <section class="footer">
-          <h3 role="heading" aria-level="3" class="footer__title">Contact</h3>
+    <section class="show">
+      <h3 class="show__title" role="heading" aria-level="3">Titre du livre</h3>
+      <div class="show__content">
+        <div class="show__images">
+          <img src="../img/livre.jpg" width="300" height="477" alt="Image du livre" class="show__image">
+        </div>
+        <ul class="show__menu">
+          <li class="show__element show__element--auteur">
+            Auteurs&nbsp;:&nbsp; <span class="element__span">Nom</span>
+          </li>
+          <li class="show__element show__element--editeur">
+            Editeurs&nbsp;:&nbsp; <span class="element__span">Nom</span>
+          </li>
+          <li class="show__element show__element--page">
+            Pages&nbsp;:&nbsp; <span class="element__span">344</span>
+          </li>
+          <li class="show__element show__element--rank">
+            Notes&nbsp;:&nbsp;<div class="show__rating">
+              <a href="#5" title="Donner 5 étoiles" class="show__rating--link"></a><!--
+          --><a href="#4" title="Donner 4 étoiles" class="show__rating--link"></a><!--
+        --><a href="#3" title="Donner 3 étoiles" class="show__rating--link"></a><!--
+      --><a href="#2" title="Donner 2 étoiles" class="show__rating--link"></a><!--
+    --><a href="#1" title="Donner 1 étoile" class="show__rating--link"></a>
+  </div>
+</li>
+<li class="show__element">
+  <a href="#" class="show__link">Ajouter au favoris</a>
+</li>
+<li class="show__element">
+  <a href="#" class="show__link">Modifier</a>
+</li>
+<li class="show__element">
+  <a href="#" class="show__link">Supprimer</a>
+</li>
+</ul>
+</div>
+<article class="show__summary">
+  <h5 class="summary__title">Résumé</h5>
+  <p class="summary__text">Après la mort tragique de Lily et James Potter, Harry est recueilli par sa tante Pétunia, (la sœur de Lily) et son oncle Vernon à l'âge d'un an. Ces derniers, animés depuis toujours d'une haine féroce envers les parents du garçon qu'ils qualifient de gens «bizarres», voire de monstres»a 1, traitent froidement leur neveu et demeurent indifférents aux humiliations que leur fils Dudley lui fait subir. Harry ignore tout de l'histoire de ses parents, si ce n'est qu'ils ont été tués dans un accident de voiturea 2.
+    Le jour de ses 11 ans, un demi-géant du nom de Rubeus Hagrid vient le chercher pour l’emmener à Poudlard, une école de sorcellerie, où il est inscrit depuis sa naissance et attendu pour la prochaine rentrée. Hagrid lui révèle alors qu’il a toujours été un sorcier, tout comme l'étaient ses parents, tués en réalité par le plus puissant mage noir du monde de la sorcellerie, Voldemort (surnommé "Celui-Dont-On-Ne-Doit-Pas-Prononcer-Le-Nom"), après qu'ils ont refusé de se joindre à luia 3.
 
-          <form method="get" action="#" class="footer__form">
-            <label for="name" class="footer__label">Nom&nbsp;</label>
-            <input type="text" name="nom" id="name" value="" placeholder="Dylan" class="footer__input">
-            <label for="firstname" class="footer__label">Prénom&nbsp;</label>
-            <input type="text" name="prénom" id="firstname" value="" placeholder="Schirino" class="footer__input">
-            <label for="message" class="footer__label">Message&nbsp;</label>
-            <textarea id="message"  name="message" class="footer__input  footer__input--textarea">
-            </textarea>
-            <input type="submit" value="Envoyer" class="footer__submit">
-          </form>
+    Ce serait Harry lui-même, alors qu'il n'était encore qu'un bébé, qui aurait fait ricocher le sortilège que Voldemort lui destinait, neutralisant ses pouvoirs et le réduisant à l'état de créature quasi-insignifiantea 4. Le fait d'avoir vécu son enfance chez son oncle et sa tante dépourvus de pouvoirs magiques lui a donc permis de grandir à l'abri de sa notoriété dans le monde des sorciers.
 
-          <div class="subfooter">
-            <p class="subfooter__text">Design by Dylan Schirino &copy;</p>
-          </div>
-      </section>
-    </footer>
-  </body>
-  </html>
+
+    Harry entre donc à l’école de Poudlard, dirigée par le professeur Albus Dumbledore. Il est envoyé dans la maison Gryffondor par le choixpeau magique. Il y fait la connaissance de Ron Weasley et Hermione Granger, qui deviendront ses complices. Par ailleurs, Harry intègre rapidement l'équipe de Quidditch de sa maison, un sport collectif très populaire chez les sorciers se pratiquant sur des balais volants. Harry connaît probablement la plus heureuse année de sa vie, mais également la plus périlleuse, car Voldemort n'a pas totalement disparu et semble bien décidé à reprendre forme humaine.</p>
+  </article>
+</section>
+</main>
+<footer>
+  <section class="footer">
+    <h3 role="heading" aria-level="3" class="footer__title">Contact</h3>
+
+    <form method="get" action="#" class="footer__form">
+      <label for="name" class="footer__label">Nom&nbsp;</label>
+      <input type="text" name="nom" id="name" value="" placeholder="Dylan" class="footer__input">
+      <label for="firstname" class="footer__label">Prénom&nbsp;</label>
+      <input type="text" name="prénom" id="firstname" value="" placeholder="Schirino" class="footer__input">
+      <label for="message" class="footer__label">Message&nbsp;</label>
+      <textarea id="message"  name="message" class="footer__input  footer__input--textarea">
+      </textarea>
+      <input type="submit" value="Envoyer" class="footer__submit">
+    </form>
+
+    <div class="subfooter">
+      <p class="subfooter__text">Design by Dylan Schirino &copy;</p>
+    </div>
+  </section>
+</footer>
+</body>
+</html>

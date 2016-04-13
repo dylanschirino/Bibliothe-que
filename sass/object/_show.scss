@@ -1,0 +1,40 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/show.scss -  Non DESIGN show section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+ .show{
+   width:90em;
+   margin: auto;
+   &__title{
+     margin:3em 0;
+   }
+   &__content{
+     &::after{
+       content:"";
+       display: block;
+       clear: both;
+     }
+   }
+   &__images{
+     float: left;
+     margin-right: 10em;
+   }
+   &__summary{
+     display: block;
+     margin-top:5em;
+   }
+     &__element{
+       float:right;
+       width: 25em;
+     }
+ }
+
+ .summary{
+   &__title{
+     font: 2em $opensanStack;
+     margin: 2em 0;
+   }
+ }

@@ -21,7 +21,7 @@ module.exports = function( grunt ) {
                     "src": "css/*.css"
                 },
                 "options": {
-                    "proxy": "localhost:22602", // TODO: adapt to you configuration
+                    "proxy": "localhost:23754", // TODO: adapt to you configuration
                     "watchTask": true
                 }
             }

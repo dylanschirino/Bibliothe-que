@@ -1,0 +1,92 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/show.scss -  DESIGN show section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+
+.show{
+  &__title{
+    font-size: 3em;
+    text-align: center;
+    color: #4A90E2;
+    text-transform: uppercase;
+  }
+  &__element{
+    font: 1.6em $opensanStack;
+    padding-bottom: 1em;
+        &--auteur::before{
+          font:1.6em $fontawesomeStack;
+          content:"";
+          color:black;
+          padding-right:0.4em;
+        }
+        &--editeur::before{
+          font:1.6em $fontawesomeStack;
+          content:"";
+          color:black;
+          padding-right:0.4em;
+        }
+        &--page::before{
+          font:1.6em $fontawesomeStack;
+          content:"";
+          color:black;
+          padding-right:0.4em;
+        }
+        &--name::before{
+          font:1.6em $fontawesomeStack;
+          content:"";
+          color:black;
+          padding-right:0.4em;
+        }
+        &--book::before{
+          font:1.6em $fontawesomeStack;
+          content:"";
+          color:black;
+          padding-right:0.4em;
+        }
+        &--rank::before{
+          font:1.6em $fontawesomeStack;
+          content:"";
+          color:black;
+          padding-right:0.4em;
+        }
+  }
+  &__rating{
+    border-bottom: 1px solid black;
+    padding: 1em;
+    &--link {
+    font:2.5em $fontawesomeStack;
+   color:$black;
+   text-decoration: none;
+   float: right;
+   margin-top: -1em;
+   transition:color .4s;
+   &:hover,&:focus,&:hover~&,&:focus~&{
+     color:#E22D2D;
+     cursor: pointer;
+   }
+}
+  }
+&__link{
+  text-align: center;
+  background-color: #1A2127;
+  padding: 1em;
+  color: $white;
+  border-radius: 5px;
+  &:hover{
+    background-color:#132330;
+  }
+}
+}
+.summary{
+  &__title{
+    padding-bottom: 2em;
+    border-bottom: 1px solid black;
+  }
+  &__text{
+    padding-bottom: 4em;
+    line-height: 1.7em;
+  }
+}

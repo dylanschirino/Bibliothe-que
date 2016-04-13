@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* BIBLIOTHEQUE
  *
  * /sass/styles.scss - Main stylesheet
@@ -9,6 +10,13 @@
   font-family: 'opensans';
   src: url("../fonts/opensans/opensans-regular-webfont.eot");
   src: url("../fonts/opensans/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans/opensans-regular-webfont.woff") format("woff"), url("../fonts/opensans/opensans-regular-webfont.ttf") format("truetype"), url("../fonts/opensans/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/fontawesome/Linearicons-Free.eot?w118d");
+  src: url("../fonts/fontawesome/Linearicons-Free.eot?#iefixw118d") format("embedded-opentype"), url("../fonts/fontawesome/Linearicons-Free.woff2?w118d") format("woff2"), url("../fonts/fontawesome/Linearicons-Free.woff?w118d") format("woff"), url("../fonts/fontawesome/Linearicons-Free.ttf?w118d") format("truetype"), url("../fonts/fontawesome/Linearicons-Free.svg?w118d#Linearicons-Free") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -63,7 +71,6 @@ html {
   font-size: 62.5%; }
 
 body {
-  background: url("../img/grille.png") repeat center fixed;
   background-size: 5em; }
 
 a {
@@ -222,6 +229,43 @@ HEADER OBJECTS FILES
   width: 20em; }
 
 /* BIBLIOTHEQUE
+ *
+ * /sass/object/show.scss -  Non DESIGN show section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.show {
+  width: 90em;
+  margin: auto; }
+  .show__title {
+    margin: 3em 0; }
+  .show__content::after {
+    content: "";
+    display: block;
+    clear: both; }
+  .show__images {
+    float: left;
+    margin-right: 10em; }
+  .show__summary {
+    display: block;
+    margin-top: 5em; }
+  .show__element {
+    float: right;
+    width: 25em; }
+
+.summary__title {
+  font: 2em "opensans", "Helvetica", Arial;
+  margin: 2em 0; }
+
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/contact.scss -  Non DESIGN contact section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+/* BIBLIOTHEQUE
 *
 * /sass/object/footer.scss - NON DESIGN footer section
 *
@@ -374,6 +418,84 @@ HEADER COMPONENTS FILES
 
 /* BIBLIOTHEQUE
  *
+ * /sass/components/show.scss -  DESIGN show section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.show__title {
+  font-size: 3em;
+  text-align: center;
+  color: #4A90E2;
+  text-transform: uppercase; }
+
+.show__element {
+  font: 1.6em "opensans", "Helvetica", Arial;
+  padding-bottom: 1em; }
+  .show__element--auteur::before {
+    font: 1.6em "fontawesome";
+    content: "";
+    color: black;
+    padding-right: 0.4em; }
+  .show__element--editeur::before {
+    font: 1.6em "fontawesome";
+    content: "";
+    color: black;
+    padding-right: 0.4em; }
+  .show__element--page::before {
+    font: 1.6em "fontawesome";
+    content: "";
+    color: black;
+    padding-right: 0.4em; }
+  .show__element--name::before {
+    font: 1.6em "fontawesome";
+    content: "";
+    color: black;
+    padding-right: 0.4em; }
+  .show__element--book::before {
+    font: 1.6em "fontawesome";
+    content: "";
+    color: black;
+    padding-right: 0.4em; }
+  .show__element--rank::before {
+    font: 1.6em "fontawesome";
+    content: "";
+    color: black;
+    padding-right: 0.4em; }
+
+.show__rating {
+  border-bottom: 1px solid black;
+  padding: 1em; }
+  .show__rating--link {
+    font: 2.5em "fontawesome";
+    color: black;
+    text-decoration: none;
+    float: right;
+    margin-top: -1em;
+    transition: color .4s; }
+    .show__rating--link:hover, .show__rating--link:focus, .show__rating--link:hover ~ .show__rating--link, .show__rating--link:focus ~ .show__rating--link {
+      color: #E22D2D;
+      cursor: pointer; }
+
+.show__link {
+  text-align: center;
+  background-color: #1A2127;
+  padding: 1em;
+  color: white;
+  border-radius: 5px; }
+  .show__link:hover {
+    background-color: #132330; }
+
+.summary__title {
+  padding-bottom: 2em;
+  border-bottom: 1px solid black; }
+
+.summary__text {
+  padding-bottom: 4em;
+  line-height: 1.7em; }
+
+/* BIBLIOTHEQUE
+ *
  * /sass/components/topauthors.scss -  DESIGN topauthors section
  *
  * coded by Dylan Schirino
@@ -472,6 +594,13 @@ HEADER COMPONENTS FILES
     .books__button:hover {
       background-color: #34A198; }
 
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/contact.scss -  DESIGN contact section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
 /* BIBLIOTHEQUE
  *
  * /sass/components/footer.scss -  DESIGN footer section
