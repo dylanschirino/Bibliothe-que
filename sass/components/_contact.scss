@@ -1,7 +1,45 @@
 /* BIBLIOTHEQUE
- *
- * /sass/components/contact.scss -  DESIGN contact section
- *
- * coded by Dylan Schirino
- * started at 03/04/2016
- */
+*
+* /sass/components/contact.scss -  DESIGN contact section
+*
+* coded by Dylan Schirino
+* started at 03/04/2016
+*/
+.info{
+  &__element{
+    font:2em $opensanStack;
+    color: $white;
+    &--title{
+      font-size:1.8em;//36/2
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+  &__link{
+    color:$white;
+  }
+  &__adress{
+    background-color: #0B64A9;
+    padding: 2em;
+    &::before{
+      content:"";
+      font:3em $fontawesomeStack;
+    }
+  }
+  &__telephone{
+    background-color: #073C65;
+    padding: 2em;
+    &::before{
+      content:"";
+      font:3em $fontawesomeStack;
+    }
+  }
+  &__horaire{
+    background-color: #041C2E;
+    padding: 2em;
+    &::before{
+      content:"";
+      font:3em $fontawesomeStack;
+    }
+  }
+}

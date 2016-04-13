@@ -20,7 +20,7 @@
   font-weight: normal;
   font-style: normal; }
 
-.topbar__menu h2 {
+.topbar__menu h2, .info__title {
   display: none; }
 
 html, body, div, span, applet, object, iframe,
@@ -265,6 +265,17 @@ HEADER OBJECTS FILES
  * coded by Dylan Schirino
  * started at 03/04/2016
  */
+.info__map {
+  width: 100%;
+  height: 50em; }
+
+.info__element {
+  text-align: center; }
+
+.info__text {
+  width: 22em;
+  margin: auto; }
+
 /* BIBLIOTHEQUE
 *
 * /sass/object/footer.scss - NON DESIGN footer section
@@ -595,12 +606,44 @@ HEADER COMPONENTS FILES
       background-color: #34A198; }
 
 /* BIBLIOTHEQUE
- *
- * /sass/components/contact.scss -  DESIGN contact section
- *
- * coded by Dylan Schirino
- * started at 03/04/2016
- */
+*
+* /sass/components/contact.scss -  DESIGN contact section
+*
+* coded by Dylan Schirino
+* started at 03/04/2016
+*/
+.info__element {
+  font: 2em "opensans", "Helvetica", Arial;
+  color: white; }
+  .info__element--title {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    display: block; }
+
+.info__link {
+  color: white; }
+
+.info__adress {
+  background-color: #0B64A9;
+  padding: 2em; }
+  .info__adress::before {
+    content: "";
+    font: 3em "fontawesome"; }
+
+.info__telephone {
+  background-color: #073C65;
+  padding: 2em; }
+  .info__telephone::before {
+    content: "";
+    font: 3em "fontawesome"; }
+
+.info__horaire {
+  background-color: #041C2E;
+  padding: 2em; }
+  .info__horaire::before {
+    content: "";
+    font: 3em "fontawesome"; }
+
 /* BIBLIOTHEQUE
  *
  * /sass/components/footer.scss -  DESIGN footer section
