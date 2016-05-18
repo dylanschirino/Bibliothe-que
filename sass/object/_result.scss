@@ -9,32 +9,19 @@
  .result{
    width:80em;
    margin: auto;
-   &__title{
-     margin-left: 4.2em;
+   &::after{
+     content:"";
+     display: block;
+     clear: both;
    }
    &__livre{
      margin-top: 3em;
-     margin-left: 8.6em;
-     &::after{
-       content:"";
-       display: block;
-       clear: both;
-     }
+     margin-right:4.8em;
+     width: 44%;
+     float: left;
    }
  }
 .livre{
-  &__image{
-    display: block;
-    width:25em;
-    height:39em;
-    float:left;
-    margin-bottom: 2em;
-    padding-right: 10em;
-    &--right{
-      float:right;
-      padding-left: 10em;
-    }
-  }
   &__button{
     margin-top: 2em;
     text-align: center;

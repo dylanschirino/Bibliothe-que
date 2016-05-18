@@ -6,33 +6,6 @@
  * started at 03/04/2016
  */
 
-.footer{
-  background-color: $footerBckg;
-  &__title{
-    text-align: center;
-    font-size: 3.8em;
-    color:$white;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding:1em;
-  }
-  &__label{
-    color:$white;
-    font:1.6em $opensanStack;
-  }
-  &__submit{
-    border: none;
-    background-color: $footersubmit;
-    border-radius: 5px;
-    font:1.6em $opensanStack;
-    color:$white;
-    &:hover{
-      background-color: $footersubmitHover;
-      cursor: pointer;
-    }
-  }
-}
-
 .subfooter{
   background-color:$subfooterBckg;
   padding:2em;

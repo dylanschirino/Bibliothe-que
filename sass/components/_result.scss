@@ -8,20 +8,29 @@
 
  .result{
    &__title{
-     padding-top:2em;
+     padding-top:1em;
+     font-size: 3em;
    }
    &__livre{
-     border-bottom: 1px solid black;
      padding: 2em 0;
    }
  }
 
 .livre{
   &__title{
-    padding-bottom: 2em;
+    padding-bottom: 1em;
+    font: 2em $opensanStack;
+    text-transform:uppercase;
+    border-bottom: 1px solid black;
+  }
+  &__bold{
+    font-weight: bold;
+    display: block;
+    padding-bottom:1em;
   }
   &__summary{
     font-size: 1.4em;
+    padding: 1em 0;
   }
   &__button{
     display: inline-block;

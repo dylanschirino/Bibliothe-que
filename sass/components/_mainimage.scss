@@ -14,9 +14,10 @@
  }
  .mainimage{
    &__title{
-     font-size: 4em;
+     font-size:3.5em;
      color:$white;
-     padding-top:5.6em;
+     padding-top:6.5em;
+     text-transform: uppercase;
    }
    &__text{
      color:$white;

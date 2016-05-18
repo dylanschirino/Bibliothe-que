@@ -30,13 +30,11 @@
           <li class="menu__element">
             <a href="contact.html" class="menu__link">À propos</a>
           </li>
-          <li class="menu__element">
-            <div class="search">
-              <form action="#" method="get">
-                <input type="search" placeholder="Rechercher un livre" name="the_search" class="menu__search">
-                <input type="submit" value="SEARCH" class="menu__submit">
-              </form>
-            </div>
+          <li class="menu__element menu__element--register">
+              <a href="register.html" class="menu__link menu__link--register">S'inscrire</a>
+          </li>
+          <li class="menu__element menu__element--connexion">
+              <a href="connexion.html" class="menu__link menu__link--register">Connexion</a>
           </li>
         </ul>
       </nav>
@@ -49,7 +47,7 @@
     <section class="underheader">
 
       <div class="mainimage">
-        <h2 role="heading" aria-level="2" class="mainimage__title">Liste des livres</h2>
+        <h2 role="heading" aria-level="2" class="mainimage__title">Liste des auteurs</h2>
 
       </div>
 
@@ -77,24 +75,6 @@
           </li>
 
           <li class="menu__title">
-            <span class="menu__text">Genre</span>
-            <ul>
-              <li class="menu__subelement">
-                <a href="#" class="filter__link">Action</a>
-              </li>
-              <li class="menu__subelement">
-                <a href="#" class="filter__link">Drame</a>
-              </li>
-              <li class="menu__subelement">
-                <a href="#" class="filter__link">Aventure</a>
-              </li>
-              <li class="menu__subelement">
-                <a href="#" class="filter__link">Policier</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="menu__title">
             <span class="menu__text">Top</span>
             <ul>
               <li class="menu__subelement">
@@ -113,54 +93,33 @@
         <h3 role="heading" aria-level="3" class="result__title">Résultat de la recherche : </h3>
 
         <article class="result__livre">
-          <img src="../img/livre.jpg" alt="Image du livre" width="300" height="477" class="livre__image">
-          <h4 class="livre__title" role="heading" aria-level="4">Titre du livre</h4>
+          <h4 class="livre__title" role="heading" aria-level="4">Titre de l'auteur</h4>
           <p class="livre__summary">
-            Résumé&nbsp;:&nbsp;<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <span class="livre__bold">Résumé&nbsp;:&nbsp;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           </p>
-        <a class="livre__button"  href="showauthors.html">lire la suite</a>
-        </article>
-
-        <article class="result__livre">
-
-          <img src="../img/livre.jpg" alt="Image du livre" width="300" height="477" class="livre__image livre__image--right">
-          <h4 class="livre__title" role="heading" aria-level="4">Titre du livre</h4>
-          <p class="livre__summary">
-            Résumé&nbsp;:&nbsp;<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-      <a class="livre__button"  href="showauthors.html">lire la suite</a>
+        <a class="livre__button"  href="showauthors.html">Vers la fiche du livre</a>
         </article>
         <article class="result__livre">
-
-          <img src="../img/livre.jpg" alt="Image du livre" width="300" height="477" class="livre__image">
-          <h4 class="livre__title" role="heading" aria-level="4">Titre du livre</h4>
+          <h4 class="livre__title" role="heading" aria-level="4">Titre de l'auteur</h4>
           <p class="livre__summary">
-            Résumé&nbsp;:&nbsp;<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <span class="livre__bold">Résumé&nbsp;:&nbsp;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           </p>
-          <a class="livre__button"  href="showauthors.html">lire la suite</a>
+        <a class="livre__button"  href="showauthors.html">Vers la fiche du livre</a>
+        </article>
+        <article class="result__livre">
+          <h4 class="livre__title" role="heading" aria-level="4">Titre de l'auteur</h4>
+          <p class="livre__summary">
+            <span class="livre__bold">Résumé&nbsp;:&nbsp;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          </p>
+        <a class="livre__button"  href="showauthors.html">Vers la fiche du livre</a>
         </article>
 
       </section>
     </main>
     <footer>
-      <section class="footer">
-          <h3 role="heading" aria-level="3" class="footer__title">Contact</h3>
-
-          <form method="get" action="#" class="footer__form">
-            <label for="name" class="footer__label">Nom&nbsp;</label>
-            <input type="text" name="nom" id="name" value="" placeholder="Dylan" class="footer__input">
-            <label for="firstname" class="footer__label">Prénom&nbsp;</label>
-            <input type="text" name="prénom" id="firstname" value="" placeholder="Schirino" class="footer__input">
-            <label for="message" class="footer__label">Message&nbsp;</label>
-            <textarea id="message"  name="message" class="footer__input  footer__input--textarea">
-            </textarea>
-            <input type="submit" value="Envoyer" class="footer__submit">
-          </form>
-
           <div class="subfooter">
             <p class="subfooter__text">Design by Dylan Schirino &copy;</p>
           </div>
-      </section>
     </footer>
   </body>
   </html>

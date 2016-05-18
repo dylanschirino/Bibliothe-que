@@ -1,0 +1,24 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/object/register.scss -  NON DESIGN register section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.form{
+  max-width:40%;
+  margin: auto;
+  &__label{
+    margin: 1em 0 0.6em 0;
+  }
+  &__input{
+    width: 100%;
+    height:3em;
+  }
+  &__submit{
+    margin: 2em 0;
+    display: block;
+    width:10em;
+    height:3em;
+  }
+}

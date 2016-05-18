@@ -15,10 +15,10 @@
      padding:1em;
      color:white;
    }
-     &__image{
-       border-radius: 50%;
-       padding-bottom: 3em;
-     }
+   &__image{
+     padding-bottom:3em;
+     border-radius: 10px;
+   }
      &__button{
        font:1.3em $opensanStack;
        background-color: $moreauthorsBckg;
@@ -27,6 +27,7 @@
        color:$white;
        text-align: center;
        border-radius: 5px;
+
        &:hover{
          background-color: $moreauthorsHover;
        }

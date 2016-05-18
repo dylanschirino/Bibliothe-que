@@ -1,0 +1,53 @@
+/* BIBLIOTHEQUE
+ *
+ * /sass/components/register.scss -  DESIGN register section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+
+ .form{
+   padding-top:10em;
+   margin-bottom:4em;
+   &__container{
+     background-color:#F7F7F7;
+     border-radius: 5px;
+     padding-bottom: 1em;
+   }
+   &__title{
+     text-transform: uppercase;
+     text-align: center;
+     font:2.5em $opensanStack;
+     padding: 1em 0;
+   }
+   &__content{
+     width: 50%;
+     margin: auto;
+   }
+   &__label{
+     display: block;
+     font: 1.6em $opensanStack;
+     text-transform: uppercase;
+   }
+   &__input{
+     -webkit-appareance:none;
+     border: none;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+     padding-left:2em;
+     font-size: 1.6em;
+   }
+   &__submit{
+     font-size: 1.6em;
+     border:none;
+     border-radius: 3px;
+     background-color: #69C1B0;
+     text-transform: uppercase;
+     color:$white;
+     transition: .2s ease-in-out;
+     &:hover{
+       background-color: #5D727E;
+       cursor: pointer;
+     }
+   }
+ }

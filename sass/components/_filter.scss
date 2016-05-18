@@ -19,6 +19,21 @@
   &__input{
     padding:1em;
     border: none;
+    -webkit-appearance: textfield;
+  }
+  &__submit{
+    font-size: 1.3em;
+    background-color:$white;
+    border:none;
+    border-radius: 5px;
+    color:$black;
+    text-transform: uppercase;
+    transition: .2s ease-in-out;
+    &:hover{
+      background-color: black;
+      cursor:pointer;
+      color:white;
+    }
   }
   &__link{
     padding-top: 1em;
@@ -37,10 +52,8 @@
 }
 .menu{
   &__title{
-    display: inline-block;
-    vertical-align: top;
+    display:block;
     padding:1em;
-    text-align: center;
   }
   &__text{
     font:1.6em $lucidaStack;

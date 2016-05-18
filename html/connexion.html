@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="biblio,authors,editors,books,library">
+  <meta name="author" content="Dylan Schirino">
+  <link rel="stylesheet" href="../css/styles.css" type="text/css">
+  <title>BiblioTECH - </title>
+</head>
+<body>
+  <header class="header">
+
+    <div class="header__topbar">
+      <h1 aria-level="1" role="heading" class="topbar__title"><a href="../index.html" class="topbar__title--link">Bibliotech</a></h1>
+      <nav class="topbar__menu">
+        <h2 role="heading" aria-level="2"> Main Navigation</h2>
+        <ul>
+          <li class="menu__element">
+            <a href="../index.html" class="menu__link">Accueil</a>
+          </li>
+          <li class="menu__element">
+            <a href="livres.html" class="menu__link">Livres</a>
+          </li>
+          <li class="menu__element">
+            <a href="auteurs.html" class="menu__link">Auteurs</a>
+          </li>
+          <li class="menu__element">
+            <a href="editeurs.html" class="menu__link">Editeurs</a>
+          </li>
+          <li class="menu__element">
+            <a href="contact.html" class="menu__link">À propos</a>
+          </li>
+          <li class="menu__element menu__element--register">
+              <a href="register.html" class="menu__link menu__link--register">S'inscrire</a>
+          </li>
+          <li class="menu__element menu__element--connexion">
+              <a href="connexion.html" class="menu__link menu__link--register">Connexion</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <main class="wrapper">
+    <section class="form">
+      <div class="form__container">
+      <h2 class="form__title" aria-level="2" role="heading">Connexion</h2>
+        <form class="form__content" method="post" action="index.php">
+          <label for="username" class="form__label">Nom d'utilisateur</label>
+          <input class="form__input" type="text" name="username" value="" id="username" placeholder="Nom d'utilisateur">
+
+          <label for="pass" class="form__label">Mot de passe</label>
+          <input class="form__input" type="password" name="password" value="" id="pass" placeholder="password">
+          <input type="submit" class="form__submit" value="Connexion">
+        </form>
+      </div>
+    </section>
+    </main>
+  </body>
+  </html>

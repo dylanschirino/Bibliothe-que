@@ -25,12 +25,19 @@ HEADER COMPONENTS FILES
 .menu{
   &__element{
     font: 1.6em $lucidaStack;
+    &--register{
+      background-color:#69C1B0;
+    }
+    &--connexion{
+      background-color: #5D727E;
+    }
   }
   &__submit{
     border-radius:5px;
     height:40px;
     border:none;
     background: $searchBckg;
+    color: $white;
     transition: .5s ease-in-out;
     &:hover{
       cursor: pointer;
@@ -42,8 +49,9 @@ HEADER COMPONENTS FILES
     border:none;
     padding-left:1em;
     background: #2b303b;
-    color:$black;
+    color:$white;
     transition: .5s ease-in-out;
+     -webkit-appearance: textfield;
     &:focus{
       background-color: $white;
       color:$searchBckg;

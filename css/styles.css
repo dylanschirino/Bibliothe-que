@@ -108,6 +108,8 @@ HEADER OBJECTS FILES
 .menu__element {
   display: inline-block;
   margin-left: 1em; }
+  .menu__element--connexion {
+    margin: 0; }
 
 /* BIBLIOTHEQUE
  *
@@ -163,8 +165,8 @@ HEADER OBJECTS FILES
  */
 .topauthors__image {
   display: block;
-  width: 50em;
-  height: 50em;
+  width: 35em;
+  height: 35em;
   margin: auto; }
 
 .topauthors__button {
@@ -183,14 +185,21 @@ HEADER OBJECTS FILES
   margin: auto; }
 
 .filter__input {
-  width: 100%;
+  width: 60%;
   margin-bottom: 2em; }
 
 .filter__submit {
-  display: none; }
+  display: inline-block;
+  -webkit-appareance: none;
+  width: 30%;
+  height: 35px; }
 
 .menu__title {
-  margin-left: 4em; }
+  display: block; }
+
+.menu__subelement {
+  display: inline-block;
+  padding-left: 1em; }
 
 /* BIBLIOTHEQUE
  *
@@ -202,26 +211,15 @@ HEADER OBJECTS FILES
 .result {
   width: 80em;
   margin: auto; }
-  .result__title {
-    margin-left: 4.2em; }
+  .result::after {
+    content: "";
+    display: block;
+    clear: both; }
   .result__livre {
     margin-top: 3em;
-    margin-left: 8.6em; }
-    .result__livre::after {
-      content: "";
-      display: block;
-      clear: both; }
-
-.livre__image {
-  display: block;
-  width: 25em;
-  height: 39em;
-  float: left;
-  margin-bottom: 2em;
-  padding-right: 10em; }
-  .livre__image--right {
-    float: right;
-    padding-left: 10em; }
+    margin-right: 4.8em;
+    width: 44%;
+    float: left; }
 
 .livre__button {
   margin-top: 2em;
@@ -277,6 +275,27 @@ HEADER OBJECTS FILES
   margin: auto; }
 
 /* BIBLIOTHEQUE
+ *
+ * /sass/object/register.scss -  NON DESIGN register section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.form {
+  max-width: 40%;
+  margin: auto; }
+  .form__label {
+    margin: 1em 0 0.6em 0; }
+  .form__input {
+    width: 100%;
+    height: 3em; }
+  .form__submit {
+    margin: 2em 0;
+    display: block;
+    width: 10em;
+    height: 3em; }
+
+/* BIBLIOTHEQUE
 *
 * /sass/object/footer.scss - NON DESIGN footer section
 *
@@ -298,7 +317,8 @@ HEADER OBJECTS FILES
   width: 30em;
   margin: auto;
   display: block;
-  padding: 1em; }
+  padding: 1em;
+  -webkit-appearance: textfield; }
   .footer__input--textarea {
     width: 25.8em; }
 
@@ -321,12 +341,17 @@ HEADER COMPONENTS FILES
 
 .menu__element {
   font: 1.6em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif; }
+  .menu__element--register {
+    background-color: #69C1B0; }
+  .menu__element--connexion {
+    background-color: #5D727E; }
 
 .menu__submit {
   border-radius: 5px;
   height: 40px;
   border: none;
   background: #2b303b;
+  color: white;
   transition: .5s ease-in-out; }
   .menu__submit:hover {
     cursor: pointer; }
@@ -337,8 +362,9 @@ HEADER COMPONENTS FILES
   border: none;
   padding-left: 1em;
   background: #2b303b;
-  color: black;
-  transition: .5s ease-in-out; }
+  color: white;
+  transition: .5s ease-in-out;
+  -webkit-appearance: textfield; }
   .menu__search:focus {
     background-color: white;
     color: #2b303b; }
@@ -372,7 +398,20 @@ HEADER COMPONENTS FILES
     border-bottom: 1px solid white; }
   .filter__input {
     padding: 1em;
-    border: none; }
+    border: none;
+    -webkit-appearance: textfield; }
+  .filter__submit {
+    font-size: 1.3em;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-transform: uppercase;
+    transition: .2s ease-in-out; }
+    .filter__submit:hover {
+      background-color: black;
+      cursor: pointer;
+      color: white; }
   .filter__link {
     padding-top: 1em;
     font: 1.2em "opensans", "Helvetica", Arial;
@@ -385,10 +424,8 @@ HEADER COMPONENTS FILES
     border-bottom: 1px solid white; }
 
 .menu__title {
-  display: inline-block;
-  vertical-align: top;
-  padding: 1em;
-  text-align: center; }
+  display: block;
+  padding: 1em; }
 
 .menu__text {
   font: 1.6em "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif;
@@ -403,17 +440,26 @@ HEADER COMPONENTS FILES
  * started at 03/04/2016
  */
 .result__title {
-  padding-top: 2em; }
+  padding-top: 1em;
+  font-size: 3em; }
 
 .result__livre {
-  border-bottom: 1px solid black;
   padding: 2em 0; }
 
 .livre__title {
-  padding-bottom: 2em; }
+  padding-bottom: 1em;
+  font: 2em "opensans", "Helvetica", Arial;
+  text-transform: uppercase;
+  border-bottom: 1px solid black; }
+
+.livre__bold {
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1em; }
 
 .livre__summary {
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  padding: 1em 0; }
 
 .livre__button {
   display: inline-block;
@@ -482,7 +528,7 @@ HEADER COMPONENTS FILES
     color: black;
     text-decoration: none;
     float: right;
-    margin-top: -1em;
+    margin-top: -0.9em;
     transition: color .4s; }
     .show__rating--link:hover, .show__rating--link:focus, .show__rating--link:hover ~ .show__rating--link, .show__rating--link:focus ~ .show__rating--link {
       color: #E22D2D;
@@ -521,8 +567,8 @@ HEADER COMPONENTS FILES
     padding: 1em;
     color: white; }
   .topauthors__image {
-    border-radius: 50%;
-    padding-bottom: 3em; }
+    padding-bottom: 3em;
+    border-radius: 10px; }
   .topauthors__button {
     font: 1.3em "opensans", "Helvetica", Arial;
     background-color: #EEB555;
@@ -548,9 +594,10 @@ HEADER COMPONENTS FILES
   height: 50em; }
 
 .mainimage__title {
-  font-size: 4em;
+  font-size: 3.5em;
   color: white;
-  padding-top: 5.6em; }
+  padding-top: 6.5em;
+  text-transform: uppercase; }
 
 .mainimage__text {
   color: white;
@@ -646,33 +693,56 @@ HEADER COMPONENTS FILES
 
 /* BIBLIOTHEQUE
  *
+ * /sass/components/register.scss -  DESIGN register section
+ *
+ * coded by Dylan Schirino
+ * started at 03/04/2016
+ */
+.form {
+  padding-top: 10em;
+  margin-bottom: 4em; }
+  .form__container {
+    background-color: #F7F7F7;
+    border-radius: 5px;
+    padding-bottom: 1em; }
+  .form__title {
+    text-transform: uppercase;
+    text-align: center;
+    font: 2.5em "opensans", "Helvetica", Arial;
+    padding: 1em 0; }
+  .form__content {
+    width: 50%;
+    margin: auto; }
+  .form__label {
+    display: block;
+    font: 1.6em "opensans", "Helvetica", Arial;
+    text-transform: uppercase; }
+  .form__input {
+    -webkit-appareance: none;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 2em;
+    font-size: 1.6em; }
+  .form__submit {
+    font-size: 1.6em;
+    border: none;
+    border-radius: 3px;
+    background-color: #69C1B0;
+    text-transform: uppercase;
+    color: white;
+    transition: .2s ease-in-out; }
+    .form__submit:hover {
+      background-color: #5D727E;
+      cursor: pointer; }
+
+/* BIBLIOTHEQUE
+ *
  * /sass/components/footer.scss -  DESIGN footer section
  *
  * coded by Dylan Schirino
  * started at 03/04/2016
  */
-.footer {
-  background-color: #414141; }
-  .footer__title {
-    text-align: center;
-    font-size: 3.8em;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 1em; }
-  .footer__label {
-    color: white;
-    font: 1.6em "opensans", "Helvetica", Arial; }
-  .footer__submit {
-    border: none;
-    background-color: #E24A4A;
-    border-radius: 5px;
-    font: 1.6em "opensans", "Helvetica", Arial;
-    color: white; }
-    .footer__submit:hover {
-      background-color: #B62E2E;
-      cursor: pointer; }
-
 .subfooter {
   background-color: #27313B;
   padding: 2em; }

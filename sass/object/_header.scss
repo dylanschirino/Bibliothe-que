@@ -24,5 +24,8 @@ HEADER OBJECTS FILES
   &__element{
     display: inline-block;
     margin-left: 1em;
+    &--connexion{
+      margin: 0;
+    }
   }
 }
