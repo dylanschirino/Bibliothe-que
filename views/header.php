@@ -12,7 +12,7 @@
           <h2 role="heading" aria-level="2"> Main Navigation</h2>
           <ul>
             <li class="menu__element">
-              <a href="index.html" class="menu__link menu__link--active">Accueil</a>
+              <a href="index.php" class="menu__link menu__link--active">Accueil</a>
             </li>
             <li class="menu__element">
               <a href="html/livres.html" class="menu__link">Livres</a>

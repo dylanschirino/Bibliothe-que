@@ -1,4 +1,7 @@
+db.ini
 
 node
 
 node_modules/.bin/browser-sync
+
+controllers/AuthController.php

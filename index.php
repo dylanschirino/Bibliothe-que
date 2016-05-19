@@ -26,6 +26,6 @@ $controller_name = 'Controllers\\' . ucfirst($r) . 'Controller';
 $container = new \Illuminate\Container\Container();
 $controller = $container->make($controller_name);
 
-$data = call_user_func([$controller, $a]);
+$data = call_user_func([$controller, $a]); // Toute les données qui ont été retourné par le model et les controllers se trouvent dans data
 
 include('views/layout.php');
