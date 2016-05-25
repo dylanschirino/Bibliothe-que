@@ -7,7 +7,9 @@
  */
 $routes = [
     'default' => 'GET/home/page',
-    'record_score' => 'GET/admin/page',
+    'admin_page'=>'GET/admin/page',
+    'index_authors' => 'GET/authors/page',
+    'index_books' => 'GET/books/page',
     'get_register'=>'GET/getRegister/auth',
     'get_login'=>'GET/getLogin/auth',
     'get_logout'=>'GET/getLogout/auth',
