@@ -5,11 +5,12 @@
  * Date: 25/05/16
  * Time: 14:49
  */
-namespace Controller;
-
+namespace Controllers;
 use Models\Authors;
+use Models\Book;
+use Models\Editor;
 
-class AuthorController{
+class AuthorController {
 
     private $authors_model = null;
 
@@ -19,7 +20,7 @@ class AuthorController{
         $this->authors_model = new Authors();
     }
     // On crée la fonction index
-    function index(){
+    public function index(){
         $authors = $this->authors_model->all();
         $page_title='BiblioTECH - Auteurs';
         $view = 'index_authors.php';
@@ -36,11 +37,18 @@ class AuthorController{
         if (isset($_GET['with'])) {
             $with = explode(',', $_GET['with']);
             if (in_array('books', $with)) {
-                $books_model = new Books();
+                $books_model = new Book();
                 $books = $books_model->getBooksByAuthorId($authors->id);
             }
         }
         $editors = null;
+        if (isset($_GET['with'])) {  //on regarde si la clé with existe si oui on explose sont contenu
+            $with = explode(',', $_GET['with']);
+            if (in_array('editors', $with)) { //on verifie si le mots authors est dans le tableau
+                $editors_model = new Editor(); // on crée un nouveau model des auteurs
+                $editors = $editors_model->getEditorsByAuthorId($authors->id);
+            }
+        }
         $page_title = 'la fiche de ' . $authors->name;
         $view = 'show_authors.php';
         return [

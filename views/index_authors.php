@@ -15,11 +15,12 @@
         <div class="filter__content">
             <h3 role="heading" aria-level="3" class="filter__title">Filtrer par&nbsp;:</h3>
             <div class="filter__search">
-                <form action="#" method="get">
-                    <input type="search" class="filter__input" placeholder="Rechercher un livre" name="the_search">
+                <form action="views/search.php" method="get">
+                    <input type="text" class="filter__input" placeholder="Rechercher un Auteur" name="search">
                     <input type="submit" value="Envoyer" class="filter__submit">
                 </form>
             </div>
+
             <ul class="filter__menu">
                 <li class="menu__title">
                     <span class="menu__text">Date</span>
@@ -47,7 +48,7 @@
             </ul>
         </div>
     </section>
-    
+
     <section class="result">
         <h3 role="heading" aria-level="3" class="result__title">Résultat de la recherche : </h3>
         <?php foreach ($data['author'] as $authors): ?>
@@ -59,7 +60,7 @@
                     <span class="livre__bold">Résumé&nbsp;:&nbsp;</span>
                     <?php echo substr($authors->biographie, 0, 300) . ' ...'; ?>
                 </p>
-                <a class="livre__button" href="?a=show&e=authors&id=<?php echo $authors->id; ?>">Vers la fiche du
+                <a class="livre__button" href="?a=show&r=author&id=<?php echo $authors->id;?>&with=books,editors">Vers la fiche du
                     livre</a>
             </article>
         <?php endforeach; ?>

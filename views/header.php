@@ -15,13 +15,13 @@
               <a href="index.php" class="menu__link menu__link--active">Accueil</a>
             </li>
             <li class="menu__element">
-              <a href="html/livres.html" class="menu__link">Livres</a>
+              <a href="?a=index&r=book" class="menu__link">Livres</a>
             </li>
             <li class="menu__element">
-              <a href="?a=authors&e=page" class="menu__link">Auteurs</a>
+              <a href="?a=index&r=author" class="menu__link">Auteurs</a>
             </li>
             <li class="menu__element">
-              <a href="html/editeurs.html" class="menu__link">Editeurs</a>
+              <a href="?a=index&r=editors" class="menu__link">Editeurs</a>
             </li>
             <li class="menu__element">
               <a href="html/contact.html" class="menu__link">À propos</a>
