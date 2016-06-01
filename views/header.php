@@ -21,7 +21,7 @@
               <a href="?a=index&r=author" class="menu__link">Auteurs</a>
             </li>
             <li class="menu__element">
-              <a href="?a=index&r=editors" class="menu__link">Editeurs</a>
+              <a href="?a=index&r=editor" class="menu__link">Editeurs</a>
             </li>
             <li class="menu__element">
               <a href="html/contact.html" class="menu__link">À propos</a>

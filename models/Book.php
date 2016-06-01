@@ -12,7 +12,7 @@ class Book extends Model
     public function getBooksByEditorId($id){
         $sql = 'SELECT book.* FROM book JOIN editor ON (editor.id=editor_id) WHERE editor.id=:id
         ';
-        $pdoSt = $this->connection->prepare($sql);
+        $pdoSt = $this->cn->prepare($sql);
         $pdoSt->execute(['id'=>$id]);
         return $pdoSt->fetchAll();
     }

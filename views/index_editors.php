@@ -64,7 +64,7 @@
             <span class="livre__bold">Description&nbsp;:&nbsp;</span>
             <?php echo substr($editors->description, 0, 300) . ' ...'; ?>
           </p>
-        <a class="livre__button"  href="?a=show&r=editor&id=<?php echo $editors->id; ?>">Vers la fiche de <?php echo $editors->society;?></a>
+        <a class="livre__button"  href="?a=show&r=editor&id=<?php echo $editors->id;?>&with=books,authors">Vers la fiche de <?php echo $editors->society;?></a>
         </article>
         <?php endforeach;?>
 

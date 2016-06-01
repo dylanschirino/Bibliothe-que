@@ -80,16 +80,24 @@
                 <li class="show__element show__element--editeur">
                     Société&nbsp;:&nbsp; <span class="element__span"><?php echo $data['editors']->society;?></span>
                 </li>
-                <?php foreach($data['authors'] as $authors) : ?>
                 <li class="show__element show__element--auteur">
-                    Auteur&nbsp;:&nbsp; <span class="element__span"><?php echo $data['authors']->name;?></span>
+                    Auteur&nbsp;:&nbsp;
+                    <?php foreach($data['authors'] as $authors) : ?>
+                    <span class="element__span">
+                        <?php echo $authors->name.', ';?>
+                    </span>
+                    <?php endforeach;?>
                 </li>
-                <?php endforeach;?>
-                <?php foreach($data['books'] as $book) : ?>
+
                 <li class="show__element show__element--book">
-                    Livre&nbsp;:&nbsp; <span class="element__span"><?php echo $data['books']->title;?></span>
+                    Livre&nbsp;:&nbsp;
+                    <?php foreach($data['books'] as $book) : ?>
+                    <span class="element__span">
+                        <?php echo $book->title.', ';?>
+                    </span>
+                    <?php endforeach;?>
                 </li>
-                <?php endforeach;?>
+
                 <li class="show__element show__element--rank">
                     Notes&nbsp;:&nbsp;<div class="show__rating">
                         <a href="#5" title="Donner 5 étoiles" class="show__rating--link"></a><!--
@@ -112,14 +120,10 @@
         </div>
         <article class="show__summary">
             <h5 class="summary__title">Résumé</h5>
-            <p class="summary__text">Après la mort tragique de Lily et James Potter, Harry est recueilli par sa tante Pétunia, (la sœur de Lily) et son oncle Vernon à l'âge d'un an. Ces derniers, animés depuis toujours d'une haine féroce envers les parents du garçon qu'ils qualifient de gens «bizarres», voire de monstres»a 1, traitent froidement leur neveu et demeurent indifférents aux humiliations que leur fils Dudley lui fait subir. Harry ignore tout de l'histoire de ses parents, si ce n'est qu'ils ont été tués dans un accident de voiturea 2.
-                Le jour de ses 11 ans, un demi-géant du nom de Rubeus Hagrid vient le chercher pour l’emmener à Poudlard, une école de sorcellerie, où il est inscrit depuis sa naissance et attendu pour la prochaine rentrée. Hagrid lui révèle alors qu’il a toujours été un sorcier, tout comme l'étaient ses parents, tués en réalité par le plus puissant mage noir du monde de la sorcellerie, Voldemort (surnommé "Celui-Dont-On-Ne-Doit-Pas-Prononcer-Le-Nom"), après qu'ils ont refusé de se joindre à luia 3.
-
-                Ce serait Harry lui-même, alors qu'il n'était encore qu'un bébé, qui aurait fait ricocher le sortilège que Voldemort lui destinait, neutralisant ses pouvoirs et le réduisant à l'état de créature quasi-insignifiantea 4. Le fait d'avoir vécu son enfance chez son oncle et sa tante dépourvus de pouvoirs magiques lui a donc permis de grandir à l'abri de sa notoriété dans le monde des sorciers.
-
-
-                Harry entre donc à l’école de Poudlard, dirigée par le professeur Albus Dumbledore. Il est envoyé dans la maison Gryffondor par le choixpeau magique. Il y fait la connaissance de Ron Weasley et Hermione Granger, qui deviendront ses complices. Par ailleurs, Harry intègre rapidement l'équipe de Quidditch de sa maison, un sport collectif très populaire chez les sorciers se pratiquant sur des balais volants. Harry connaît probablement la plus heureuse année de sa vie, mais également la plus périlleuse, car Voldemort n'a pas totalement disparu et semble bien décidé à reprendre forme humaine.</p>
-        </article>
+            <p class="summary__text">
+                <?php echo $data['editors']->description;?>
+            </p>
+            </article>
     </section>
 </main>
 <footer>
