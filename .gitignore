@@ -4,4 +4,5 @@ node
 
 node_modules/.bin/browser-sync
 
-controllers/AuthController.php
+
+.idea/workspace.xml
