@@ -8,32 +8,31 @@
 
 
 namespace Controllers;
-use Models\Authors;
+use Models\Book;
 
-class AuthorController {
+class BookController {
 
-    private $authors_model = null;
+    private $books_model = null;
 
     // On lie author_model à Author
     public function __construct()
     {
-        $this->authors_model = new Authors();
+        $this->books_model = new Book();
     }
     // On crée la fonction index
     public function index(){
-        $authors = $this->authors_model->all();
+        $books = $this->books_model->all();
         $page_title='BiblioTECH - Auteurs';
-        $view = 'index_authors.php';
-        return ['author' => $authors, 'page_title' => $page_title, 'view' => $view,];
+        $view = 'index_books.php';
+        return ['books' => $books, 'page_title' => $page_title, 'view' => $view,];
     }
-    function show()
+    public function show()
     {
         if (!isset($_GET['id'])) {
             die('Il manque l’identifiant de votre Auteurs');
         }
         $id = intval($_GET['id']);
-        $authors = $this->authors_model->find($id);
-        $books = null;
+        $books = $this->books_model->find($id);
         if (isset($_GET['with'])) {
             $with = explode(',', $_GET['with']);
             if (in_array('books', $with)) {
