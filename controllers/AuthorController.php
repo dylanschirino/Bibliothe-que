@@ -44,8 +44,8 @@ class AuthorController {
         $editors = null;
         if (isset($_GET['with'])) {  //on regarde si la clé with existe si oui on explose sont contenu
             $with = explode(',', $_GET['with']);
-            if (in_array('editors', $with)) { //on verifie si le mots authors est dans le tableau
-                $editors_model = new Editor(); // on crée un nouveau model des auteurs
+            if (in_array('editors', $with)) { //on verifie si le mots editors est dans le tableau
+                $editors_model = new Editor(); // on crée un nouveau model des editeurs
                 $editors = $editors_model->getEditorsByAuthorId($authors->id);
             }
         }

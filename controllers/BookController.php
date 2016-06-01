@@ -8,7 +8,9 @@
 
 
 namespace Controllers;
+use Models\Authors;
 use Models\Book;
+use Models\Editor;
 
 class BookController {
 
@@ -33,16 +35,24 @@ class BookController {
         }
         $id = intval($_GET['id']);
         $books = $this->books_model->find($id);
+        $authors = null;
         if (isset($_GET['with'])) {
             $with = explode(',', $_GET['with']);
-            if (in_array('books', $with)) {
-                $books_model = new Books();
-                $books = $books_model->getBooksByAuthorId($authors->id);
+            if (in_array('authors', $with)) {
+                $authors_model = new Authors();
+                $authors = $authors_model->getAuthorsByBookId($books->id);
             }
         }
         $editors = null;
-        $page_title = 'la fiche de ' . $authors->name;
-        $view = 'show_authors.php';
+        if (isset($_GET['with'])) {  //on regarde si la clé with existe si oui on explose sont contenu
+            $with = explode(',', $_GET['with']);
+            if (in_array('editors', $with)) { //on verifie si le mots editors est dans le tableau
+                $editors_model = new Editor(); // on crée un nouveau model des editeurs
+                $editors = $editors_model->getEditorsByBookId($books->id);
+            }
+        }
+        $page_title = 'la fiche de ' . $books->title;
+        $view = 'show_books.php';
         return [
             'authors' => $authors,
             'books' => $books,
