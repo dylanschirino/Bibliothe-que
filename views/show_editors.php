@@ -114,7 +114,7 @@
                     <a href="#" class="show__link">Modifier</a>
                 </li>
                 <li class="show__element">
-                    <a href="#" class="show__link">Supprimer</a>
+                    <a href="?a=deleteEditor&r=editor&id=<?php echo $data['editors']->id;?>" class="show__link">Supprimer</a>
                 </li>
             </ul>
         </div>

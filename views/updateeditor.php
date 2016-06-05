@@ -22,7 +22,7 @@
 
             <input type="submit" class="form__submit" value="s'inscrire">
             <div>
-                <input type="hidden" name="a" value="postEditor">
+                <input type="hidden" name="a" value="updateEditor">
                 <input type="hidden" name="r" value="editor">
             </div>
         </form>

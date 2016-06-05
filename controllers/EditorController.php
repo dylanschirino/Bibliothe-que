@@ -39,6 +39,7 @@ class EditorController
         }
         $id = intval($_GET['id']);
         $editors = $this->editor_model->find($id);
+
         $books = null;
         if (isset($_GET['with'])) {
             $with = explode(',', $_GET['with']);
@@ -67,6 +68,7 @@ class EditorController
     }
     public function getEditor(){
         return['view'=>'registereditor.php','ressource_title'=>'register new Editor'];
+
     }
     public function postEditor(){
         if ($this->editor_model->save([
@@ -77,5 +79,10 @@ class EditorController
         ) {
             return ['view' => 'index_editors.php', 'ressource_title' => 'Liste des éditeurs'];
         }
+    }
+    public function deleteEditor()
+    {
+        $this->editor_model->delete($_GET['id']);
+        return['view'=>'deleteeditors.php'];
     }
 }

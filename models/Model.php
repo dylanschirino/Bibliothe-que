@@ -94,7 +94,7 @@ class Model
     {
         $sFieldsNames = implode('`, `', array_keys($fields));
         $sFieldsJokers = implode(', :', array_keys($fields));
-        $sql = sprintf('UPDATE %s(`%s`) SET(`%s`) = (:%s) WHERE id = :id)',
+        $sql = sprintf('UPDATE %s SET(`%s`) = (:%s) WHERE id = :id)',
             $this->table,
             $sFieldsNames,
             $sFieldsJokers);
@@ -103,5 +103,10 @@ class Model
             $pdoSt->bindValue(':' . $field, $fields[$field]);
         }
         return $pdoSt->execute([':id' => $id]);
+    }
+    public function delete($id){
+        $sql = sprintf('DELETE FROM %s WHERE id = :id', $this->table);
+        $pdoSt = $this->cn->prepare($sql);
+        $pdoSt->execute([':id' => $id]);
     }
 }
