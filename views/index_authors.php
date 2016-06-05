@@ -60,8 +60,7 @@
                     <span class="livre__bold">Résumé&nbsp;:&nbsp;</span>
                     <?php echo substr($authors->biographie, 0, 300) . ' ...'; ?>
                 </p>
-                <a class="livre__button" href="?a=show&r=author&id=<?php echo $authors->id;?>&with=books,editors">Vers la fiche du
-                    livre</a>
+                <a class="livre__button" href="?a=show&r=author&id=<?php echo $authors->id;?>&with=books,editors">Vers la fiche de <?php echo $authors->name;?></a>
             </article>
         <?php endforeach; ?>
     </section>

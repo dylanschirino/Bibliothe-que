@@ -47,9 +47,9 @@
                 <?php endif;?>
                 <li class="show__element show__element--rank">
                     Notes&nbsp;:&nbsp;<div class="show__rating">
-                        <?php for($i=0;$i<$data['authors']->aut_rating;$i++) :?>)
+                        <?php for($i=0;$i<$data['authors']->aut_rating;$i++) :?>
                         <a href="#" title="Donner 5 étoiles" class="show__rating--link"></a>
-                        <?php endif;?>
+                        <?php endfor;?>
                     </div>
                 </li>
                 <li class="show__element">

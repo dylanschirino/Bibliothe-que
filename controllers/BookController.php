@@ -8,6 +8,7 @@
 
 
 namespace Controllers;
+use Models\AuthorBook;
 use Models\Authors;
 use Models\Book;
 use Models\Editor;
@@ -60,5 +61,34 @@ class BookController {
             'page_title' => $page_title,
             'view' => $view,
         ];
+    }
+    public function getBook(){
+        $editors = null;
+        $this->editor_model = new Editor();
+        $authors = null;
+        $this->author_model = new Authors();
+        $authorbook=null;
+        $this->authorbook_model = new AuthorBook();
+        $authorbook = $this->authorbook_model->all();
+        $editors = $this->editor_model->all();
+        $authors = $this->author_model->all();
+        return['view'=>'registerbook.php','ressource_title'=>'register new Book','editors'=>$editors,'authors'=>$authors,'authorbook'=>$authorbook];
+    }
+    public function postBook(){
+        if ($this->books_model->save([
+            'title' => $_POST['title'],
+            'num_page' => $_POST['num_page'],
+            'summary' => $_POST['summary'],
+            'cover'=>$_POST['cover'],
+            'editor_id'=>$_POST['editorID']
+        ])
+        ) {
+            return ['view' => '?a=index&r=author.php', 'ressource_title' => 'Liste des éditeurs'];
+        }
+    }
+    public function deleteBook()
+    {
+        $this->books_model->delete($_GET['id']);
+        return['view'=>'deleteBook.php'];
     }
 }
