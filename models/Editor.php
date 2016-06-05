@@ -25,10 +25,7 @@ class Editor extends Model
         $pdoSt->execute(['id' => $id]);
         return $pdoSt->fetchAll();
     }
-    public function updateEditors($id){
-
-        $society = null;
-        $description = null;
+    public function updateEditors($id,$society,$description){
         $sql = 'UPDATE editor
                 SET   society = :society,
                       description = :description

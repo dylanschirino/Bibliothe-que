@@ -76,6 +76,11 @@ class AuthorController {
         ) {
             return ['view' => '?a=index&r=author.php', 'ressource_title' => 'Liste des éditeurs'];
         }
-    }
 
+    }
+    public function deleteAuthor()
+    {
+        $this->authors_model->delete($_GET['id']);
+        return['view'=>'deleteAuthors.php'];
+    }
 }

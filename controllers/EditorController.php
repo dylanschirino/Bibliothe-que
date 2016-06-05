@@ -83,8 +83,7 @@ class EditorController
 
     public function updateEditor(){
         $editors = $this->editor_model->find($_GET['id']);
-        $this->editor_model->updateEditors($_GET['id']);
-        $this->editor_model->delete($_GET['id']);
+        $this->editor_model->updateEditors($_GET['id'],$editors->society,$editors->description);
         return ['view'=>'updateregister.php','editors'=>$editors];
     }
     public function deleteEditor()

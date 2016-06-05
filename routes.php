@@ -15,12 +15,16 @@ $routes = [
     'index_books' =>'GET/index/book',
     'show_books' =>'GET/show/book',
     'get_register'=>'GET/getRegister/auth',
-    'get_editor'=>'GET/getEditor/editor',
+
     'get_author'=>'GET/getAuthor/author',
     'post_author'=>'POST/postAuthor/author',
+    'delete_author'=>'GET/deleteAuthor/author',
+
     'get_login'=>'GET/getLogin/auth',
     'get_logout'=>'GET/getLogout/auth',
     'post_register'=>'POST/postRegister/auth',
+
+    'get_editor'=>'GET/getEditor/editor',
     'post_editor'=>'POST/postEditor/editor',
     'delete_editor'=>'GET/deleteEditor/editor',
     'update_editor'=>'GET/updateEditor/editor',
