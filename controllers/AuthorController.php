@@ -41,14 +41,14 @@ class AuthorController {
                 $books = $books_model->getBooksByAuthorId($authors->id);
             }
         }
-        $editors = null;
-        if (isset($_GET['with'])) {  //on regarde si la clé with existe si oui on explose sont contenu
-            $with = explode(',', $_GET['with']);
-            if (in_array('editors', $with)) { //on verifie si le mots editors est dans le tableau
-                $editors_model = new Editor(); // on crée un nouveau model des editeurs
-                $editors = $editors_model->getEditorsByAuthorId($authors->id);
+            $editors = null;
+            if (isset($_GET['with'])) {  //on regarde si la clé with existe si oui on explose sont contenu
+                $with = explode(',', $_GET['with']);
+                if (in_array('editors', $with)) { //on verifie si le mots editors est dans le tableau
+                    $editors_model = new Editor(); // on crée un nouveau model des editeurs
+                    $editors = $editors_model->getEditorsByAuthorId($authors->id);
+                }
             }
-        }
         $page_title = 'la fiche de ' . $authors->name;
         $view = 'show_authors.php';
         return [
@@ -60,17 +60,21 @@ class AuthorController {
         ];
     }
     public function getAuthor(){
-        return['view'=>'registerauthor.php','ressource_title'=>'register new Author'];
-
+        $editors = null;
+        $this->editor_model = new Editor();
+        $editors = $this->editor_model->all();
+        return['view'=>'registerauthor.php','ressource_title'=>'register new Author','editors'=>$editors];
     }
     public function postAuthor(){
         if ($this->authors_model->save([
             'name' => $_POST['name'],
-            'description' => $_POST['descriptionEd'],
-            'picture' => $_POST['picture']
+            'firstname' => $_POST['firstname'],
+            'biographie' => $_POST['biographie'],
+            'photo'=>$_POST['photo'],
+            'editor_id'=>$_POST['editorID']
         ])
         ) {
-            return ['view' => '?a=index&r=editor.php', 'ressource_title' => 'Liste des éditeurs'];
+            return ['view' => '?a=index&r=author.php', 'ressource_title' => 'Liste des éditeurs'];
         }
     }
 

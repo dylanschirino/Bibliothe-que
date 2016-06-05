@@ -109,7 +109,7 @@
                     </div>
                 </li>
                 <li class="show__element">
-                    <a href="#" class="show__link">Ajouter au favoris</a>
+                    <a href="?a=getAuthor&r=author&id=<?php echo $data['authors']->id;?>&with=books,editors" class="show__link">Ajouter un auteur</a>
                 </li>
                 <li class="show__element">
                     <a href="#" class="show__link">Modifier</a>
