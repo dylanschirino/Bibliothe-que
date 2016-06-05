@@ -108,7 +108,7 @@
                     </div>
                 </li>
                 <li class="show__element">
-                    <a href="#" class="show__link">Ajouter au favoris</a>
+                    <a href="?a=getEditor&r=editor" class="show__link">Ajouter un éditeur</a>
                 </li>
                 <li class="show__element">
                     <a href="#" class="show__link">Modifier</a>

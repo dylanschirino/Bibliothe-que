@@ -15,8 +15,10 @@ $routes = [
     'index_books' =>'GET/index/book',
     'show_books' =>'GET/show/book',
     'get_register'=>'GET/getRegister/auth',
+    'get_editor'=>'GET/getEditor/editor',
     'get_login'=>'GET/getLogin/auth',
     'get_logout'=>'GET/getLogout/auth',
     'post_register'=>'POST/postRegister/auth',
+    'post_editor'=>'POST/postEditor/editor',
     'post_login'=>'POST/postLogin/auth'
 ];

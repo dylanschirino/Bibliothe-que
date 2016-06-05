@@ -65,4 +65,17 @@ class EditorController
             'view' => $view,
         ];
     }
+    public function getEditor(){
+        return['view'=>'registereditor.php','ressource_title'=>'register new Editor'];
+    }
+    public function postEditor(){
+        if ($this->editor_model->save([
+            'society' => $_POST['society'],
+            'description' => $_POST['descriptionEd'],
+            'picture' => $_POST['picture']
+        ])
+        ) {
+            return ['view' => 'index_editors.php', 'ressource_title' => 'Liste des éditeurs'];
+        }
+    }
 }

@@ -90,4 +90,18 @@ class Model
         }
         return $pdoSt->execute();
     }
+    public function update($fields,$id)
+    {
+        $sFieldsNames = implode('`, `', array_keys($fields));
+        $sFieldsJokers = implode(', :', array_keys($fields));
+        $sql = sprintf('UPDATE %s(`%s`) SET(`%s`) = (:%s) WHERE id = :id)',
+            $this->table,
+            $sFieldsNames,
+            $sFieldsJokers);
+        $pdoSt = $this->cn->prepare($sql);
+        foreach (array_keys($fields) as $field) {
+            $pdoSt->bindValue(':' . $field, $fields[$field]);
+        }
+        return $pdoSt->execute([':id' => $id]);
+    }
 }
