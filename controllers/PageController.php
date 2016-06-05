@@ -9,11 +9,21 @@ use Models\Authors;
 use Models\Book;
 
 class PageController extends Controller{
+    private $authors_model = null;
+    private $books_model = null;
 
-    public function home(){
-        return ['view'=>'home.php','ressource_title'=>'Home Page'];
+    // On lie author_model à Author
+    public function __construct()
+    {
+        $this->authors_model = new Authors();
+        $this->books_model = new Book();
     }
-
+    public function home(){
+        $authors = $this->authors_model->all();
+        $books = $this->books_model->all();
+        $view = 'home.php';
+        return ['author' => $authors,'books'=>$books, 'view' => $view,'ressource_title'=>'Home Page'];
+    }
     public function admin(){
         //on verifie sur l'utilisateur est bien connecter, chaque fois qu'on veut sécuriser une page on doit mettre ceci
         if(!isset($_SESSION['user'])){

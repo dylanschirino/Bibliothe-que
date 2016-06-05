@@ -24,7 +24,7 @@ class AuthorController {
         $authors = $this->authors_model->all();
         $page_title='BiblioTECH - Auteurs';
         $view = 'index_authors.php';
-        return ['author' => $authors, 'page_title' => $page_title, 'view' => $view,];
+        return ['author' => $authors, 'page_title' => $page_title, 'view' => $view];
     }
     function show()
     {

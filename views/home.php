@@ -14,31 +14,28 @@
     </section>
     <section class="topbooks">
         <h3 role="heading" aria-level="3" class="topbooks__title">Livres à la une</h3>
-
+        <?php $i = 0;
+        // On prend l'ordre inverse du tableau et on fait un break quand on 2 element.
+        foreach(array_reverse($data['books']) as $books):?>
+            <?php if(++$i > 2) break;?>
         <article class="books">
-            <h4 class="books__title" role="heading" aria-level="4">Titre du livre</h4>
-            <img src="img/livre.jpg" alt="Image du livre" width="200" height="300" class="books__image">
+            <h4 class="books__title" role="heading" aria-level="4"><?php echo $books->title;?></h4>
+            <img src="<?php echo $books->cover;?>" alt="Image du livre" width="200" height="300" class="books__image">
             <p class="books__summary">
-                Résumé&nbsp;:&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Résumé&nbsp;:&nbsp;<?php echo substr($books->summary, 0, 300) . ' ...';?>
             </p>
-            <a class="books__button"  href="html/showbooks.html">lire la suite</a>
+            <a class="books__button"  href="?a=show&r=book&id=<?php echo $books->id;?>&with=authors,editors">Voir la fiche de <?php echo $books->title;?></a>
         </article>
+        <?php endforeach;?>
 
-        <article class="books">
-            <h4 class="books__title" role="heading" aria-level="4">Titre du livre</h4>
-            <img src="img/livre.jpg" alt="Image du livre" width="200" height="300" class="books__image">
-            <p class="books__summary">
-                Résumé&nbsp;:&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <a class="books__button"  href="html/showbooks.html">lire la suite</a>
-        </article>
 
     </section>
 
     <section class="topauthors">
-        <h3 role="heading" aria-level="3" class="topauthors__title">Auteurs du mois</h3>
-        <img src="img/auteurs.jpg" alt="Image de l'auteur" width="675" height="500" class="topauthors__image">
-        <a class="topauthors__button"  href="showauthors.html">lire la fiche de l'auteur</a>
+        <?php $author = end($data['author']) ;?>
+        <h3 role="heading" aria-level="3" class="topauthors__title">Dernier auteur ajouté</h3>
+        <img src="<?php echo $author->photo;?>" alt="Image de l'auteur" class="topauthors__image">
+        <a class="topauthors__button"  href="?a=show&r=author&id=<?php echo $author->id;?>&with=books,editors">lire la fiche de <?php echo $author->firstname.' '.$author->name;?></a>
     </section>
 
 </main>

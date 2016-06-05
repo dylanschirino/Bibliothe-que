@@ -24,7 +24,7 @@ class BookController {
     // On crée la fonction index
     public function index(){
         $books = $this->books_model->all();
-        $page_title='BiblioTECH - Auteurs';
+        $page_title='BiblioTECH - Livres';
         $view = 'index_books.php';
         return ['books' => $books, 'page_title' => $page_title, 'view' => $view,];
     }

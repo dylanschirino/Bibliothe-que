@@ -26,7 +26,7 @@ class AuthController{
         if($user=$this->user_model->check(['username'=>$_POST['username'],'password'=>sha1($_POST['password'])
         ])){
             $_SESSION['user']=json_encode($user);
-            header('Location: ?a=admin&r=page');
+            header('Location: index.php');
             return;
         }
         else{

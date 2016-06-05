@@ -10,5 +10,11 @@
 <body>
 <?php include('header.php');?>
 <?php include($data['view']); ?>
+<footer>
+    <div class="subfooter">
+        <p class="subfooter__text">Design by Dylan Schirino &copy;</p>
+    </div>
+</footer>
 </body>
 </html>
+
