@@ -77,8 +77,15 @@ class EditorController
             'picture' => $_POST['picture']
         ])
         ) {
-            return ['view' => 'index_editors.php', 'ressource_title' => 'Liste des éditeurs'];
+            return ['view' => '?a=index&r=editor.php', 'ressource_title' => 'Liste des éditeurs'];
         }
+    }
+
+    public function updateEditor(){
+        $editors = $this->editor_model->find($_GET['id']);
+        $this->editor_model->updateEditors($_GET['id']);
+        $this->editor_model->delete($_GET['id']);
+        return ['view'=>'updateregister.php','editors'=>$editors];
     }
     public function deleteEditor()
     {

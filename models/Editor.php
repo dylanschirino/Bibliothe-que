@@ -25,4 +25,19 @@ class Editor extends Model
         $pdoSt->execute(['id' => $id]);
         return $pdoSt->fetchAll();
     }
+    public function updateEditors($id){
+
+        $society = null;
+        $description = null;
+        $sql = 'UPDATE editor
+                SET   society = :society,
+                      description = :description
+                WHERE id = :id';
+        $pdost = $this->cn->prepare($sql);
+        $pdost->execute([
+            ':society' => $society,
+            ':description' => $description,
+            ':id' => $id
+        ]);
+    }
 }

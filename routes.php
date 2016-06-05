@@ -20,6 +20,7 @@ $routes = [
     'get_logout'=>'GET/getLogout/auth',
     'post_register'=>'POST/postRegister/auth',
     'post_editor'=>'POST/postEditor/editor',
-    'update_editor'=>'GET/deleteEditor/editor',
+    'delete_editor'=>'GET/deleteEditor/editor',
+    'update_editor'=>'GET/updateEditor/editor',
     'post_login'=>'POST/postLogin/auth'
 ];

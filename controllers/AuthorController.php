@@ -59,4 +59,19 @@ class AuthorController {
             'view' => $view,
         ];
     }
+    public function getAuthor(){
+        return['view'=>'registerauthor.php','ressource_title'=>'register new Author'];
+
+    }
+    public function postAuthor(){
+        if ($this->authors_model->save([
+            'name' => $_POST['name'],
+            'description' => $_POST['descriptionEd'],
+            'picture' => $_POST['picture']
+        ])
+        ) {
+            return ['view' => '?a=index&r=editor.php', 'ressource_title' => 'Liste des éditeurs'];
+        }
+    }
+
 }
