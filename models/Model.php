@@ -11,6 +11,7 @@ class Model
      * @var string
      */
     protected $table = '';
+    protected $nbpage = 4;
     /**
      * @var null|\PDO
      */
@@ -53,14 +54,28 @@ class Model
      *
      * @return array
      */
-    public function all()
+    public function all($page)
     {
-        $sql = sprintf('SELECT * FROM %s', $this->table);
+        if($page==0) {
+            $sql = sprintf('SELECT * FROM %s', $this->table);
+        } else{
+            $nbpage = $this->nbpage;
+            $start = ($page - 1) * $nbpage;// à calculer selon la valeur de $page
+            $sql = sprintf('SELECT * FROM %s LIMIT %s,%s',$this->table, $start, $nbpage);
+        }
         $pdoSt = $this->cn->query($sql);
 
         return $pdoSt->fetchAll();
     }
+    public function getNbPages()
+    {
+        $sql = sprintf('
+            SELECT COUNT(id) as nbpage FROM %s',$this->table);
 
+        $pdoSt = $this->cn->query($sql);
+
+        return $pdoSt->fetch();
+    }
     /**
      * Returns a single record from a table
      *

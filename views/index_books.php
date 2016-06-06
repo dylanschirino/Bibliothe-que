@@ -71,6 +71,8 @@
     </section>
 
     <section class="result">
+
+        <a href="?a=getAuthorBook&r=book" class="livre__button livre__button--important">Lier un livre à un auteur</a>
         <h3 role="heading" aria-level="3" class="result__title">Résultat de la recherche : </h3>
         <?php foreach( $data['books'] as $books ): ;?>
         <article class="result__livre">
@@ -82,7 +84,17 @@
             <a class="livre__button"  href="?a=show&r=book&id=<?php echo $books->id;?>&with=authors,editors">Vers la fiche de <?php echo $books->title;?></a>
         </article>
         <?php endforeach;?>
+
     </section>
+    <div>
+        <?php if($data['page'] > 1): ?>
+            <a href="?a=index&r=book&page=<?php echo ($data['page'] - 1); ?>">Page précédente</a>
+        <?php endif; ?>
+        <span><?php echo $data['page']; ?></span>
+        <?php if($data['page'] <= 1): ?>
+            <a href="?a=index&r=book&page=<?php echo ($data['page'] + 1); ?>">Page suivante</a>
+        <?php endif; ?>
+    </div>
 </main>
 <footer>
     <div class="subfooter">

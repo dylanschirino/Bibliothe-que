@@ -24,10 +24,16 @@ class BookController {
     }
     // On crée la fonction index
     public function index(){
-        $books = $this->books_model->all();
+        $page = 1;
+        if(isset($_GET['page'])) {
+            $page = intval($_GET['page']);
+        }
+        $books = $this->books_model->all($page);
+        $nbpage = $this->books_model->getNbPages()->nbpage;
+        $nbPages = intval($nbpage / 4);
         $page_title='BiblioTECH - Livres';
         $view = 'index_books.php';
-        return ['books' => $books, 'page_title' => $page_title, 'view' => $view,];
+        return ['books' => $books, 'page_title' => $page_title, 'view' => $view,'page'=>$page,'nbPages'=>$nbPages];
     }
     public function show()
     {

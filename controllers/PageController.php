@@ -19,10 +19,14 @@ class PageController extends Controller{
         $this->books_model = new Book();
     }
     public function home(){
-        $authors = $this->authors_model->all();
-        $books = $this->books_model->all();
+        $page = 0;
+        if(isset($_GET['page'])) {
+            $page = intval($_GET['page']);
+        }
+        $authors = $this->authors_model->all($page);
+        $books = $this->books_model->all($page);
         $view = 'home.php';
-        return ['author' => $authors,'books'=>$books, 'view' => $view,'ressource_title'=>'Home Page'];
+        return ['author' => $authors,'books'=>$books, 'view' => $view,'ressource_title'=>'Home Page','page'=>$page];
     }
     public function admin(){
         //on verifie sur l'utilisateur est bien connecter, chaque fois qu'on veut sécuriser une page on doit mettre ceci

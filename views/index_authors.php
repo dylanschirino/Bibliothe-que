@@ -50,6 +50,7 @@
     </section>
 
     <section class="result">
+        <a href="?a=getAuthorBook&r=book" class="livre__button livre__button--important">Lier un livre à un auteur</a>
         <h3 role="heading" aria-level="3" class="result__title">Résultat de la recherche : </h3>
         <?php foreach ($data['author'] as $authors): ?>
             <article class="result__livre">
