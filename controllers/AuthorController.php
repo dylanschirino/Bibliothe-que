@@ -6,6 +6,7 @@
  * Time: 14:49
  */
 namespace Controllers;
+use Models\AuthorBook;
 use Models\Authors;
 use Models\Book;
 use Models\Editor;
