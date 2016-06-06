@@ -24,6 +24,7 @@ $routes = [
     'delete_book'=>'GET/deleteBook/book',
 
     'get_authorbook'=>'GET/getAuthorBook/book',
+
     'post_authorbook'=>'POST/postAuthorBook/book',
     'get_author'=>'GET/getAuthor/author',
     'post_author'=>'POST/postAuthor/author',
@@ -37,6 +38,7 @@ $routes = [
     'post_editor'=>'POST/postEditor/editor',
     'delete_editor'=>'GET/deleteEditor/editor',
     'update_editor'=>'GET/updateEditor/editor',
+    'update_editors'=>'POST/postupdate/editor',
 
     'post_login'=>'POST/postLogin/auth'
 ];

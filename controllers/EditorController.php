@@ -26,10 +26,16 @@ class EditorController
     // On crée la fonction index
     public function index()
     {
-        $editors = $this->editor_model->all();
+        $page = 1;
+        if(isset($_GET['page'])) {
+            $page = intval($_GET['page']);
+        }
+        $editors = $this->editor_model->all($page);
+        $nbpage = $this->editor_model->getNbPages()->nbpage;
+        $nbPages = intval($nbpage / 4);
         $page_title = 'BiblioTECH - Editeurs';
         $view = 'index_editors.php';
-        return ['editor' => $editors, 'page_title' => $page_title, 'view' => $view,];
+        return ['editor' => $editors, 'page_title' => $page_title, 'view' => $view,'page'=>$page,'nbPages'=>$nbPages];
     }
 
     function show()
@@ -83,6 +89,7 @@ class EditorController
 
     public function updateEditor(){
         $editors = $this->editor_model->find($_GET['id']);
+        $this->editor_model->delete($_GET['id']);
         $this->editor_model->updateEditors($_GET['id'],$editors->society,$editors->description);
         return ['view'=>'updateregister.php','editors'=>$editors];
     }

@@ -22,10 +22,16 @@ class AuthorController {
     }
     // On crée la fonction index
     public function index(){
-        $authors = $this->authors_model->all();
+        $page = 1;
+        if(isset($_GET['page'])) {
+            $page = intval($_GET['page']);
+        }
+        $nbpage = $this->authors_model->getNbPages()->nbpage;
+        $nbPages = intval($nbpage / 4);
+        $authors = $this->authors_model->all($page);
         $page_title='BiblioTECH - Auteurs';
         $view = 'index_authors.php';
-        return ['author' => $authors, 'page_title' => $page_title, 'view' => $view];
+        return ['author' => $authors, 'ressource_title' => $page_title, 'view' => $view,'page'=>$page,'nbPages'=>$nbPages];
     }
     function show()
     {

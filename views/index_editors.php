@@ -67,7 +67,15 @@
         <a class="livre__button"  href="?a=show&r=editor&id=<?php echo $editors->id;?>&with=books,authors">Vers la fiche de <?php echo $editors->society;?></a>
         </article>
         <?php endforeach;?>
-
+        <div>
+          <?php if($data['page'] > 1): ?>
+            <a href="?a=index&r=editor&page=<?php echo ($data['page'] - 1); ?>">Page précédente</a>
+          <?php endif; ?>
+          <span><?php echo $data['page']; ?></span>
+          <?php if($data['page'] < 1): ?>
+            <a href="?a=index&r=editor&page=<?php echo ($data['page'] + 1); ?>">Page suivante</a>
+          <?php endif; ?>
+        </div>
 
       </section>
     </main>
