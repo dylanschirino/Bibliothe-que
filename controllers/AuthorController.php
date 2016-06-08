@@ -86,12 +86,6 @@ class AuthorController {
             return ['view' => '?a=index&r=author.php', 'ressource_title' => 'Liste des auteurs'];
         }
     }
-    public function updateAuthor(){
-        $authors = $this->authors_model->find($_GET['id']);
-        $this->editor_model->delete($_GET['id']);
-        $this->editor_model->updateEditors($_GET['id'],$editors->society,$editors->description);
-        return ['view'=>'updateEditor.php','editors'=>$editors];
-    }
     public function deleteAuthor()
     {
         $this->authors_model->delete($_GET['id']);
