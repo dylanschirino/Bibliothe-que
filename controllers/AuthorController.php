@@ -56,21 +56,22 @@ class AuthorController {
                     $editors = $editors_model->getEditorsByAuthorId($authors->id);
                 }
             }
-        $page_title = 'la fiche de ' . $authors->name;
+        $page_title = 'La fiche de ' . $authors->name;
         $view = 'show_authors.php';
         return [
             'authors' => $authors,
             'books' => $books,
             'editors' => $editors,
-            'page_title' => $page_title,
+            'ressource_title' => $page_title,
             'view' => $view,
         ];
     }
     public function getAuthor(){
+        $page=0;
         $editors = null;
         $this->editor_model = new Editor();
-        $editors = $this->editor_model->all();
-        return['view'=>'registerauthor.php','ressource_title'=>'register new Author','editors'=>$editors];
+        $editors = $this->editor_model->all($page);
+        return['view'=>'registerauthor.php','ressource_title'=>'Enregister un Auteur','editors'=>$editors];
     }
     public function postAuthor(){
         if ($this->authors_model->save([
@@ -78,16 +79,22 @@ class AuthorController {
             'firstname' => $_POST['firstname'],
             'biographie' => $_POST['biographie'],
             'photo'=>$_POST['photo'],
+            'aut_rating'=>$_POST['rating'],
             'editor_id'=>$_POST['editorID']
         ])
         ) {
-            return ['view' => '?a=index&r=author.php', 'ressource_title' => 'Liste des éditeurs'];
+            return ['view' => '?a=index&r=author.php', 'ressource_title' => 'Liste des auteurs'];
         }
-
+    }
+    public function updateAuthor(){
+        $authors = $this->authors_model->find($_GET['id']);
+        $this->editor_model->delete($_GET['id']);
+        $this->editor_model->updateEditors($_GET['id'],$editors->society,$editors->description);
+        return ['view'=>'updateEditor.php','editors'=>$editors];
     }
     public function deleteAuthor()
     {
         $this->authors_model->delete($_GET['id']);
-        return['view'=>'deleteAuthors.php'];
+        return['view'=>'deleteAuthors.php','ressource_title'=>'Auteur supprimé'];
     }
 }

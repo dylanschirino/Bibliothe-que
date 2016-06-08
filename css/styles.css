@@ -226,6 +226,12 @@ HEADER OBJECTS FILES
   text-align: center;
   width: 20em; }
 
+.pagination {
+  display: block;
+  margin: 2em 0; }
+  .pagination__controller {
+    display: inline-block; }
+
 /* BIBLIOTHEQUE
  *
  * /sass/object/show.scss -  Non DESIGN show section
@@ -237,7 +243,7 @@ HEADER OBJECTS FILES
   width: 90em;
   margin: auto; }
   .show__title {
-    margin: 3em 0; }
+    margin: 1.5em 0; }
   .show__content::after {
     content: "";
     display: block;
@@ -255,6 +261,10 @@ HEADER OBJECTS FILES
 .summary__title {
   font: 2em "opensans", "Helvetica", Arial;
   margin: 2em 0; }
+
+.summary__text {
+  width: 38em;
+  margin: auto; }
 
 /* BIBLIOTHEQUE
  *
@@ -356,30 +366,12 @@ HEADER COMPONENTS FILES
   .menu__submit:hover {
     cursor: pointer; }
 
-.menu__search {
-  border-radius: 5px;
-  height: 40px;
-  border: none;
-  padding-left: 1em;
-  background: #2b303b;
-  color: white;
-  transition: .5s ease-in-out;
-  -webkit-appearance: textfield; }
-  .menu__search:focus {
-    background-color: white;
-    color: #2b303b; }
-  .menu__search:focus ~ .menu__submit {
-    background-color: white;
-    color: #2b303b; }
-
 .menu__link {
   color: white;
   padding: 1.2em;
   transition: .3s ease-in-out; }
   .menu__link:hover {
-    border-bottom: 3px solid white; }
-  .menu__link--active {
-    border-bottom: 3px solid white; }
+    color: #69C1B0; }
 
 /* BIBLIOTHEQUE
  *
@@ -472,6 +464,22 @@ HEADER COMPONENTS FILES
   transition: .3s ease-in-out; }
   .livre__button:hover {
     background-color: #142335; }
+  .livre__button--important {
+    display: block;
+    width: 30em;
+    margin: 2em auto; }
+
+.pagination {
+  text-align: center;
+  font: 2em "opensans", "Helvetica", Arial; }
+  .pagination__number {
+    line-height: 1.6em;
+    padding: 0 1em; }
+  .pagination__controller {
+    color: black;
+    text-decoration: underline; }
+    .pagination__controller:hover {
+      text-decoration: none; }
 
 /* BIBLIOTHEQUE
  *
@@ -481,7 +489,7 @@ HEADER COMPONENTS FILES
  * started at 03/04/2016
  */
 .show__title {
-  font-size: 3em;
+  font-size: 5em;
   text-align: center;
   color: #4A90E2;
   text-transform: uppercase; }
@@ -567,8 +575,7 @@ HEADER COMPONENTS FILES
     padding: 1em;
     color: white; }
   .topauthors__image {
-    padding-bottom: 3em;
-    border-radius: 10px; }
+    padding-bottom: 3em; }
   .topauthors__button {
     font: 1.3em "opensans", "Helvetica", Arial;
     background-color: #EEB555;
@@ -735,6 +742,14 @@ HEADER COMPONENTS FILES
     .form__submit:hover {
       background-color: #5D727E;
       cursor: pointer; }
+  .form__link {
+    text-align: center;
+    font: 1.6em "opensans", "Helvetica", Arial;
+    padding-bottom: 1em;
+    text-decoration: underline;
+    color: red; }
+    .form__link:hover {
+      text-decoration: none; }
 
 /* BIBLIOTHEQUE
  *

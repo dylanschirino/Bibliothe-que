@@ -50,4 +50,14 @@
        cursor: pointer;
      }
    }
+   &__link{
+     text-align: center;
+     font:1.6em $opensanStack;
+     padding-bottom: 1em;
+     text-decoration: underline;
+     color:red;
+     &:hover{
+       text-decoration: none;
+     }
+   }
  }

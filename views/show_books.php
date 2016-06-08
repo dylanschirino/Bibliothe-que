@@ -20,7 +20,7 @@
       <h3 class="show__title" role="heading" aria-level="3"><?php echo $data['books']->title;?></h3>
       <div class="show__content">
         <div class="show__images">
-          <img src="../img/livre.jpg" width="300" height="477" alt="Image du livre" class="show__image">
+          <img src="<?php echo $data['books']->cover;?>" width="300" height="477" alt="Image du livre" class="show__image">
         </div>
         <ul class="show__menu">
           <li class="show__element show__element--auteur">

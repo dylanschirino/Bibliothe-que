@@ -36,7 +36,7 @@
                 </li>
                 <?php endforeach;?>
                 <?php endif;?>
-                <?php if($data['editors']): ?>
+                <?php if($data['books']): ?>
                 <li class="show__element show__element--book">
                     Livre&nbsp;:&nbsp;
                     <?php foreach($data['books'] as $books) : ?>
@@ -56,7 +56,7 @@
                     <a href="?a=getAuthor&r=author&id=<?php echo $data['authors']->id;?>&with=books,editors" class="show__link">Ajouter un auteur</a>
                 </li>
                 <li class="show__element">
-                    <a href="" class="show__link">Modifier</a>
+                    <a href="?a=updateAuthor&r=author&id=<?php echo $data['authors']->id;?>" class="show__link">Modifier</a>
                 </li>
                 <li class="show__element">
                     <a href="?a=deleteAuthor&r=author&id=<?php echo $data['authors']->id;?>" class="show__link">Supprimer</a>

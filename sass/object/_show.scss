@@ -9,7 +9,7 @@
    width:90em;
    margin: auto;
    &__title{
-     margin:3em 0;
+     margin:1.5em 0;
    }
    &__content{
      &::after{
@@ -26,15 +26,19 @@
      display: block;
      margin-top:5em;
    }
-     &__element{
+   &__element{
        float:right;
        width: 25em;
-     }
+   }
  }
 
  .summary{
    &__title{
      font: 2em $opensanStack;
      margin: 2em 0;
+   }
+   &__text{
+     width:38em;
+     margin:auto;
    }
  }

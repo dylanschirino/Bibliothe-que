@@ -33,7 +33,7 @@ class BookController {
         $nbPages = intval($nbpage / 4);
         $page_title='BiblioTECH - Livres';
         $view = 'index_books.php';
-        return ['books' => $books, 'page_title' => $page_title, 'view' => $view,'page'=>$page,'nbPages'=>$nbPages];
+        return ['books' => $books, 'ressource_title' => $page_title, 'view' => $view,'page'=>$page,'nbPages'=>$nbPages];
     }
     public function show()
     {
@@ -58,24 +58,24 @@ class BookController {
                 $editors = $editors_model->getEditorsByBookId($books->id);
             }
         }
-        $page_title = 'la fiche de ' . $books->title;
+        $page_title = 'La fiche de ' . $books->title;
         $view = 'show_books.php';
         return [
             'authors' => $authors,
             'books' => $books,
             'editors' => $editors,
-            'page_title' => $page_title,
+            'ressource_title' => $page_title,
             'view' => $view,
         ];
     }
     public function getBook(){
+        $page=0;
         $editors = null;
         $this->editor_model = new Editor();
         $authors = null;
         $this->author_model = new Authors();
-        $editors = $this->editor_model->all();
-        $authors = $this->author_model->all();
-        return['view'=>'registerbook.php','ressource_title'=>'register new Book','editors'=>$editors,'authors'=>$authors,'authorbook'=>$authorbook];
+        $editors = $this->editor_model->all($page);
+        return['view'=>'registerbook.php','ressource_title'=>'register new Book','editors'=>$editors];
     }
     public function postBook(){
         if ($this->books_model->save([
@@ -83,21 +83,23 @@ class BookController {
             'num_page' => $_POST['num_page'],
             'summary' => $_POST['summary'],
             'cover'=>$_POST['cover'],
+            'rating'=>$_POST['rating'],
             'editor_id'=>$_POST['editorID']
         ])
         ) {
-            return ['view' => '?a=index&r=author.php', 'ressource_title' => 'Liste des éditeurs'];
+            return ['view' => '?a=index&r=book.php', 'ressource_title' => 'Liste des livres'];
         }
     }
     public function getAuthorBook(){
+        $page=0;
         $authors = null;
         $this->author_model = new Authors();
         $book = null;
         $this->books_model= new Book();
-        $book= $this->books_model->all();
-        $authors = $this->author_model->all();
+        $book= $this->books_model->all($page);
+        $authors = $this->author_model->all($page);
         $this->authorbook_model = new AuthorBook();
-        $authorbook = $this->authorbook_model->all();
+        $authorbook = $this->authorbook_model->all($page);
         return['view'=>'registerauthorbook.php','Link author and book','authorbook'=>$authorbook,'authors'=>$authors,'books'=>$book];
     }
     public function postAuthorBook()
@@ -109,6 +111,6 @@ class BookController {
     public function deleteBook()
     {
         $this->books_model->delete($_GET['id']);
-        return['view'=>'deleteBook.php'];
+        return['view'=>'deleteBook.php','ressource_title'=>'Livre supprimé'];
     }
 }

@@ -31,13 +31,6 @@
                 <?php endforeach;?>
             </select>
 
-            <label for="author" class="form__label">Auteur correspondant</label>
-            <select id="author" name="auteurID">
-                <?php foreach($data['authors'] as $author):?>
-                    <option value="<?php echo $author->id;?>"><?php echo $author->name.' '.$author->firstname;?></option>
-                <?php endforeach;?>
-            </select>
-
             <input type="submit" class="form__submit" value="Ajouter">
             <div>
                 <input type="hidden" name="a" value="postBook">

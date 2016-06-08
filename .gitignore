@@ -1,8 +1,7 @@
 db.ini
 
-node
+node_modules/
 
-node_modules/.bin/browser-sync
 
 
 .idea/workspace.xml

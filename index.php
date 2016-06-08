@@ -18,7 +18,7 @@ $a = isset($_REQUEST['a']) ? $_REQUEST['a'] : $route_parts[1];
 $r = isset($_REQUEST['r']) ? $_REQUEST['r'] : $route_parts[2];
 
 if (!in_array($method . '/' . $a . '/' . $r, $routes)) {
-    die('Ce que vous cherchez n’est pas ici');
+    die(header('Location:views/404.php'));
 }
 
 $controller_name = 'Controllers\\' . ucfirst($r) . 'Controller';

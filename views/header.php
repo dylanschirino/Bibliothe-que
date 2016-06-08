@@ -7,7 +7,7 @@
 <header class="header">
 
       <div class="header__topbar">
-        <h1 aria-level="1" role="heading" class="topbar__title"><a href="index.html" class="topbar__title--link">Bibliotech</a></h1>
+        <h1 aria-level="1" role="heading" class="topbar__title"><a href="index.php" class="topbar__title--link">Bibliotech</a></h1>
         <nav class="topbar__menu">
           <h2 role="heading" aria-level="2"> Main Navigation</h2>
           <ul>
@@ -22,9 +22,6 @@
             </li>
             <li class="menu__element">
               <a href="?a=index&r=editor" class="menu__link">Editeurs</a>
-            </li>
-            <li class="menu__element">
-              <a href="html/contact.html" class="menu__link">À propos</a>
             </li>
             <?php if (!isset($_SESSION['user'])): ?>
             <li class="menu__element menu__element--register">

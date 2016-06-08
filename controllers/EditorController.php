@@ -35,7 +35,7 @@ class EditorController
         $nbPages = intval($nbpage / 4);
         $page_title = 'BiblioTECH - Editeurs';
         $view = 'index_editors.php';
-        return ['editor' => $editors, 'page_title' => $page_title, 'view' => $view,'page'=>$page,'nbPages'=>$nbPages];
+        return ['editor' => $editors, 'ressource_title' => $page_title, 'view' => $view,'page'=>$page,'nbPages'=>$nbPages];
     }
 
     function show()
@@ -62,13 +62,13 @@ class EditorController
                 $authors = $authors_model->getAuthorsByEditorId($editors->id);
             }
         }
-        $page_title = 'la fiche de ' . $editors->society;
+        $page_title = 'La fiche de ' . $editors->society;
         $view = 'show_editors.php';
         return [
             'authors' => $authors,
             'books' => $books,
             'editors' => $editors,
-            'page_title' => $page_title,
+            'ressource_title' => $page_title,
             'view' => $view,
         ];
     }
@@ -91,11 +91,11 @@ class EditorController
         $editors = $this->editor_model->find($_GET['id']);
         $this->editor_model->delete($_GET['id']);
         $this->editor_model->updateEditors($_GET['id'],$editors->society,$editors->description);
-        return ['view'=>'updateregister.php','editors'=>$editors];
+        return ['view'=>'updateEditor.php','editors'=>$editors];
     }
     public function deleteEditor()
     {
         $this->editor_model->delete($_GET['id']);
-        return['view'=>'deleteeditors.php'];
+        return['view'=>'deleteeditors.php','ressource_title'=>'Editeur supprimé'];
     }
 }

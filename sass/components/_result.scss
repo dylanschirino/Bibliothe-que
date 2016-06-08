@@ -44,5 +44,27 @@
     &:hover{
       background-color: #142335;
     }
+    &--important{
+      display: block;
+      width:30em;
+      margin:2em auto;
+    }
   }
 }
+.pagination{
+  text-align: center;
+  font:2em $opensanStack;
+  &__number{
+    line-height: 1.6em;
+    padding: 0 1em;
+  }
+  &__controller{
+    color:black;
+
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
