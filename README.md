@@ -4,4 +4,4 @@ Un projet réalisé dans le cadre du cours de PHP avec une structure MVC et util
 
 La bibliothèque est disponible à l'adresse si dessous
 
-(La bibliothèque )[http://biblio.schirino.be]
+http://biblio.schirino.be
