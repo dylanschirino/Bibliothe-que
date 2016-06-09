@@ -16,9 +16,7 @@
             <label for="firstname" class="form__label">Prénom</label>
             <input class="form__input" type="text" name="firstname" value="" id="firstname" placeholder="Prénom">
 
-            <label for="biographie" class="form__label">Biographie</label>
-            <textarea class="form__input" type="text"  name="biographie" id="biographie" placeholder="Description">
-                </textarea>
+
             <label for="photo" class="form__label">Lien image auteur</label>
             <input class="form__input" type="text" name="photo" value="" id="photo" placeholder="Photo de l'auteur">
             <label for="rating" class="form__label">Note de l'auteur</label>
@@ -30,6 +28,9 @@
                 <option value="<?php echo $editor->id;?>"><?php echo $editor->society;?></option>
                 <?php endforeach;?>
             </select>
+            <label for="biographie" class="form__label">Biographie</label>
+            <textarea class="form__input form__input--textarea" type="text"  name="biographie" id="biographie" placeholder="Description">
+                </textarea>
             <input type="submit" class="form__submit" value="Ajouter">
             <div>
                 <input type="hidden" name="a" value="postAuthor">

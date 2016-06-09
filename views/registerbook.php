@@ -16,9 +16,6 @@
             <label for="num_page" class="form__label">Nombre de pages</label>
             <input class="form__input" type="number" name="num_page" value="" id="num_page" placeholder="Nombre de pages">
 
-            <label for="summary" class="form__label">Résumé</label>
-            <textarea class="form__input" type="text"  name="summary" id="summary" placeholder="Résumé">
-                </textarea>
             <label for="cover" class="form__label">Lien image livre</label>
             <input class="form__input" type="text" name="cover" value="" id="cover" placeholder="Photo du livre">
             <label for="rating" class="form__label">Note du livre</label>
@@ -30,7 +27,9 @@
                     <option value="<?php echo $editor->id;?>"><?php echo $editor->society;?></option>
                 <?php endforeach;?>
             </select>
-
+            <label for="summary" class="form__label">Résumé</label>
+            <textarea class="form__input form__input--textarea" type="text"  name="summary" id="summary" placeholder="Résumé">
+                </textarea>
             <input type="submit" class="form__submit" value="Ajouter">
             <div>
                 <input type="hidden" name="a" value="postBook">

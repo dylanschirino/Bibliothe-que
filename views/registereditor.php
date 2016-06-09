@@ -14,12 +14,12 @@
             <label for="society" class="form__label">Nom de la société</label>
             <input class="form__input" type="text" name="society" value="" id="society" placeholder="Nom de la société">
 
-            <label for="descriptionEd" class="form__label">Description de la société</label>
-            <textarea class="form__input" type="text" name="descriptionEd" id="descriptionEd" placeholder="Description">
-                </textarea>
             <label for="picture" class="form__label">Lien image société</label>
             <input class="form__input" type="text" name="picture" value="" id="picture" placeholder="Image de la société">
 
+            <label for="descriptionEd" class="form__label">Description de la société</label>
+            <textarea class="form__input form__input--textarea" type="text" name="descriptionEd" id="descriptionEd" placeholder="Description">
+                </textarea>
             <input type="submit" class="form__submit" value="s'inscrire">
             <div>
                 <input type="hidden" name="a" value="postEditor">
