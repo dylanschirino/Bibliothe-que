@@ -65,6 +65,5 @@
         <p class="subfooter__text">Design by Dylan Schirino &copy;</p>
     </div>
 </footer>
-</body>
-</html>
+
 

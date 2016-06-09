@@ -10,7 +10,6 @@
 <body>
 <?php include('header.php');?>
 <?php include($data['view']); ?>
-
 </body>
 </html>
 

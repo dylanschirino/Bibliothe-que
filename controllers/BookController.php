@@ -100,7 +100,7 @@ class BookController {
         $authors = $this->author_model->all($page);
         $this->authorbook_model = new AuthorBook();
         $authorbook = $this->authorbook_model->all($page);
-        return['view'=>'registerauthorbook.php','Link author and book','authorbook'=>$authorbook,'authors'=>$authors,'books'=>$book];
+        return['view'=>'registerauthorbook.php','ressource_title'=>'Link author and book','authorbook'=>$authorbook,'authors'=>$authors,'books'=>$book];
     }
     public function postAuthorBook()
     {

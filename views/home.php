@@ -37,5 +37,9 @@
         <img src="<?php echo $author->photo;?>" alt="Image de l'auteur" class="topauthors__image">
         <a class="topauthors__button"  href="?a=show&r=author&id=<?php echo $author->id;?>&with=books,editors">lire la fiche de <?php echo $author->firstname.' '.$author->name;?></a>
     </section>
-
 </main>
+<footer>
+    <div class="subfooter">
+        <p class="subfooter__text">Design by Dylan Schirino &copy;</p>
+    </div>
+</footer>
